@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:gravity="center" android:id="@id/lyt_container_home_adapter" android:background="@color/bg_fragment_about" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ProgressBar android:id="@id/loading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" />
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/height_480dp">
+            <ImageView android:id="@id/img_content" android:layout_width="fill_parent" android:layout_height="@dimen/height_480dp" android:scaleType="centerCrop" />
+            <ImageView android:id="@id/degradasi2" android:layout_width="fill_parent" android:layout_height="@dimen/height_480dp" android:src="@mipmap/gradasi" android:scaleType="fitXY" />
+            <FrameLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="@dimen/height_480dp">
+                <ImageView android:layout_gravity="center" android:visibility="gone" android:layout_width="@dimen/width_46dp" android:layout_height="@dimen/height_46dp" android:src="@mipmap/play_mini" />
+                <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:paddingBottom="@dimen/padding_bottom_20dp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="@dimen/txt_size_title_program_about" android:textColor="@color/white_color" android:id="@id/txt_title" android:paddingLeft="@dimen/padding_left_15dp" android:paddingBottom="@dimen/padding_bottom_10dp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/sample_title" />
+                    <LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/padding_left_15dp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <ImageView android:layout_width="@dimen/width_17dp" android:layout_height="@dimen/height_17dp" android:src="@mipmap/ico_rating" />
+                        <TextView android:textSize="@dimen/txt_rating" android:textColor="@color/white_color" android:id="@id/txt_rating" android:paddingLeft="@dimen/padding_left_8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sample_title" />
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+        </RelativeLayout>
+        <View android:layout_width="fill_parent" android:layout_height="@dimen/height_24dp" />
+        <TextView android:textSize="@dimen/txt_sinopsis_size" android:textColor="@color/txt_sinopsis_color" android:id="@id/txt_synopsis" android:paddingLeft="@dimen/padding_left_15dp" android:paddingBottom="@dimen/padding_bottom_15dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/synopsis" />
+        <TextView android:textSize="@dimen/txt_sinopsis_size" android:textColor="@color/white_color" android:id="@id/txt_year" android:paddingLeft="@dimen/padding_left_15dp" android:paddingBottom="@dimen/padding_bottom_12dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sample_genre" />
+        <TextView android:textSize="@dimen/txt_description" android:textColor="@color/white_color" android:id="@id/txt_description" android:paddingLeft="@dimen/padding_left_15dp" android:paddingRight="@dimen/padding_right_15dp" android:paddingBottom="@dimen/padding_bottom_8dp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/sample_description" />
+        <TextView android:textSize="@dimen/txt_more_size" android:textColor="@color/txt_more" android:id="@id/txt_more" android:paddingLeft="@dimen/padding_left_15dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/more" />
+        <TextView android:textSize="@dimen/txt_follow_us" android:textColor="@color/white_color" android:gravity="center" android:paddingTop="@dimen/padding_top_19dp" android:paddingBottom="@dimen/padding_bottom_5dp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/follow_us" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:paddingBottom="@dimen/padding_bottom_38dp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/link_fb" android:layout_width="@dimen/width_30dp" android:layout_height="@dimen/height_30dp" android:src="@mipmap/ico_facebook" />
+            <FrameLayout android:layout_width="@dimen/width_10dp" android:layout_height="wrap_content" />
+            <ImageView android:id="@id/link_tw" android:layout_width="@dimen/width_30dp" android:layout_height="@dimen/height_30dp" android:src="@mipmap/ico_twitter" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

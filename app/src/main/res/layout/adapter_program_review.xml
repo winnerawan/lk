@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:padding="@dimen/padding_8dp" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:paddingBottom="@dimen/padding_bottom_10dp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <de.hdodenhof.circleimageview.CircleImageView android:id="@id/img_profile" android:layout_width="@dimen/width_40dp" android:layout_height="@dimen/height_40dp" android:src="@mipmap/ico_profile" xmlns:app="http://schemas.android.com/apk/res-auto" />
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/padding_left_8dp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/txt_name_size_Review" android:textColor="@color/txt_name_review" android:id="@id/txt_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sample_title" />
+                <LinearLayout android:orientation="horizontal" android:paddingTop="@dimen/padding_top_6dp" android:layout_width="wrap_content" android:layout_height="@dimen/height_20dp">
+                    <ImageView android:id="@id/rate_1" android:layout_width="@dimen/width_12dp" android:layout_height="@dimen/height_12dp" android:src="@mipmap/ico_rating" />
+                    <View android:layout_width="@dimen/width_4dp" android:layout_height="wrap_content" />
+                    <ImageView android:id="@id/rate_2" android:layout_width="@dimen/width_12dp" android:layout_height="@dimen/height_12dp" android:src="@mipmap/ico_rating" />
+                    <View android:layout_width="@dimen/width_4dp" android:layout_height="wrap_content" />
+                    <ImageView android:id="@id/rate_3" android:layout_width="@dimen/width_12dp" android:layout_height="@dimen/height_12dp" android:src="@mipmap/ico_rating" />
+                    <View android:layout_width="@dimen/width_4dp" android:layout_height="wrap_content" />
+                    <ImageView android:id="@id/rate_4" android:layout_width="@dimen/width_12dp" android:layout_height="@dimen/height_12dp" android:src="@mipmap/ico_rating" />
+                    <View android:layout_width="@dimen/width_4dp" android:layout_height="wrap_content" />
+                    <ImageView android:id="@id/rate_5" android:layout_width="@dimen/width_12dp" android:layout_height="@dimen/height_12dp" android:src="@mipmap/ico_rating" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView android:visibility="gone" android:layout_width="@dimen/width_24dp" android:layout_height="@dimen/height_24dp" android:src="@mipmap/ico_share" />
+    </LinearLayout>
+    <TextView android:textSize="@dimen/txt_content_review" android:textColor="@color/txt_content_review" android:id="@id/txt_content_review" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/sample_description2" android:maxLines="3" />
+    <TextView android:textSize="@dimen/txt_more_size" android:textColor="@color/txt_more" android:id="@id/txt_more" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/more" />
+    <View android:layout_width="fill_parent" android:layout_height="@dimen/padding_bottom_10dp" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/lyt_liked" android:paddingBottom="@dimen/padding_bottom_20dp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/img_like" android:layout_width="@dimen/width_14dp" android:layout_height="@dimen/height_14dp" android:src="@mipmap/ico_love_inactive1" />
+        <TextView android:textSize="@dimen/txt_like_review" android:textColor="@color/txt_like_review" android:id="@id/txt_like" android:paddingLeft="@dimen/padding_left_8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/like" />
+    </LinearLayout>
+    <View android:background="@color/line_adapter_program_Review" android:layout_width="fill_parent" android:layout_height="@dimen/height_1dp" />
+</LinearLayout>

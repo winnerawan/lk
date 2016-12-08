@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar
+    android:gravity="center"
+    android:id="@+id/toolbar"
+    android:background="@color/color_toolbar"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/height_54dp"
+    android:layout_alignParentTop="true"
+    app:contentInsetStart="@dimen/nol_dp"
+    app:contentInsetEnd="@dimen/nol_dp"
+    app:contentInsetLeft="@dimen/nol_dp"
+    app:contentInsetRight="@dimen/nol_dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:weightSum="5.0">
+
+        <FrameLayout
+            android:id="@+id/f_btn_feeds"
+            android:background="?selectableItemBackground"
+            android:clickable="true"
+            android:layout_width="@dimen/nol_dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:id="@+id/btn_feeds"
+                android:layout_width="@dimen/width_24dp"
+                android:layout_height="@dimen/height_24dp"
+                android:src="@mipmap/ico_feeds_active"
+                android:scaleType="centerInside" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/f_btn_explorer"
+            android:background="?selectableItemBackground"
+            android:clickable="true"
+            android:layout_width="@dimen/nol_dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:id="@+id/btn_explorer"
+                android:layout_width="@dimen/width_24dp"
+                android:layout_height="@dimen/height_24dp"
+                android:src="@mipmap/ico_explorer"
+                android:scaleType="centerInside" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/f_btn_continue_watching"
+            android:background="?selectableItemBackground"
+            android:clickable="true"
+            android:layout_width="@dimen/nol_dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:id="@+id/btn_continue_watching"
+                android:background="@null"
+                android:layout_width="@dimen/width_24dp"
+                android:layout_height="@dimen/height_24dp"
+                android:src="@mipmap/ico_continue_watching"
+                android:scaleType="centerInside" />
+        </FrameLayout>
+        <FrameLayout
+            android:id="@+id/f_btn_search"
+            android:background="?selectableItemBackground"
+            android:clickable="true"
+            android:layout_width="@dimen/nol_dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0">
+            <ImageView
+                android:layout_gravity="center"
+                android:id="@+id/btn_search"
+                android:background="@null"
+                android:layout_width="@dimen/width_24dp"
+                android:layout_height="@dimen/height_24dp"
+                android:src="@mipmap/ico_search"
+                android:scaleType="centerInside" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/f_btn_more"
+            android:background="?selectableItemBackground"
+            android:clickable="true"
+            android:layout_width="@dimen/nol_dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:id="@+id/btn_more"
+                android:background="@null"
+                android:layout_width="@dimen/width_24dp"
+                android:layout_height="@dimen/height_24dp"
+                android:src="@mipmap/ico_more"
+                android:scaleType="centerInside" />
+        </FrameLayout>
+    </LinearLayout>
+</android.support.v7.widget.Toolbar>

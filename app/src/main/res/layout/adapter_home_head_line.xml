@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:gravity="center" android:id="@id/lyt_container_home_adapter" android:layout_width="fill_parent" android:layout_height="@dimen/height_img_head_line"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <app.netmediatama.zulu_android.component.NonSwipeableViewPager android:id="@id/view_pager_head_line" android:layout_width="fill_parent" android:layout_height="@dimen/height_img_head_line" android:layout_below="@id/container" />
+    <LinearLayout android:gravity="bottom|center|right" android:orientation="horizontal" android:id="@id/lyt_indicator" android:paddingRight="@dimen/padding_right_24dp" android:paddingBottom="@dimen/padding_bottom_18dp" android:layout_width="fill_parent" android:layout_height="@dimen/height_img_head_line" />
+</FrameLayout>

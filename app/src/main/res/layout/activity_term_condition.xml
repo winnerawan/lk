@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/bg_term_condition_activity" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/layout_toolbar" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/txt_term_condition" android:textColor="@color/txt_term_condition" android:id="@id/txt2_term_condition" android:padding="@dimen/padding_8dp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/txt_term_condition" />
+            <WebView android:textSize="@dimen/txt_term_condition" android:textColor="@color/txt_term_condition" android:id="@id/txt_term_condition" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

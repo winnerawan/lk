@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.daimajia.swipe.SwipeLayout android:id="@id/swipe" android:layout_width="fill_parent" android:layout_height="wrap_content" swipe:leftEdgeSwipeOffset="0.0dip" swipe:rightEdgeSwipeOffset="0.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:swipe="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:id="@id/bottom_wrapper" android:paddingBottom="@dimen/padding_bottom_5dp" android:layout_width="1.0dip" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center" android:id="@id/lyt_watch_list" android:background="@color/bg_add_tomylist_chose" android:visibility="gone" android:layout_width="100.0dip" android:layout_height="fill_parent">
+            <ImageView android:id="@id/img_watch_list" android:layout_width="@dimen/width_20dp" android:layout_height="@dimen/height_20dp" android:src="@mipmap/ico_addtomylist" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:background="?android:selectableItemBackground" android:paddingLeft="@dimen/padding_left_4dp" android:paddingRight="@dimen/padding_right_4dp" android:paddingBottom="@dimen/padding_bottom_1dp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:background="@color/bg_continue_watching_list" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:gravity="center" android:layout_width="@dimen/width_150dp" android:layout_height="@dimen/height_90dp">
+                    <ImageView android:id="@id/img_content" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@mipmap/ic_launcher" android:scaleType="centerCrop" />
+                    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                        <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/play_mini" />
+                    </FrameLayout>
+                </RelativeLayout>
+                <FrameLayout android:orientation="vertical" android:padding="@dimen/padding_10dp" android:layout_width="@dimen/nol_dp" android:layout_height="wrap_content" android:minHeight="@dimen/height_90dp" android:layout_weight="1.0">
+                    <LinearLayout android:layout_gravity="top" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="5.0">
+                        <TextView android:textSize="@dimen/txt_title_13sp" android:textColor="@color/txt_title" android:ellipsize="end" android:id="@id/txt_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/sample_title" android:maxLines="3" android:layout_weight="4.0" />
+                        <LinearLayout android:gravity="right" android:layout_width="@dimen/nol_dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                            <ImageView android:id="@id/img_add_to_my_list" android:layout_width="@dimen/width_24dp" android:layout_height="@dimen/height_24dp" android:src="@mipmap/ico_addtomylist" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <FrameLayout android:gravity="bottom" android:layout_gravity="bottom" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+                        <LinearLayout android:gravity="left" android:layout_gravity="bottom" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                            <TextView android:textSize="@dimen/txt_episode_size_14sp" android:textColor="@color/txt_episode" android:id="@id/txt_episode" android:paddingRight="@dimen/padding_right_8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sample_episode" />
+                            <TextView android:textSize="@dimen/txt_time_size" android:textColor="@color/txt_time" android:gravity="right" android:id="@id/txt_time" android:visibility="gone" android:layout_width="@dimen/nol_dp" android:layout_height="wrap_content" android:text="@string/sample_time" android:layout_weight="1.0" />
+                        </LinearLayout>
+                    </FrameLayout>
+                </FrameLayout>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+</com.daimajia.swipe.SwipeLayout>

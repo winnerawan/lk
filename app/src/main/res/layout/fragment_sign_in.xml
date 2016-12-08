@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:paddingLeft="@dimen/padding_left_18dp" android:paddingTop="@dimen/padding_top_45dp" android:paddingRight="@dimen/padding_right_18dp" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <android.support.design.widget.TextInputLayout android:textColorHint="@color/txt_color_email" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <EditText android:textSize="@dimen/txt_email_size" android:textColor="@color/txt_color_email" android:textColorHint="@color/txt_color_email" android:id="@id/txt_email" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/email" android:singleLine="true" android:inputType="textNoSuggestions" android:imeOptions="actionNext" />
+        </android.support.design.widget.TextInputLayout>
+        <FrameLayout android:paddingTop="@dimen/padding_top_4dp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <View android:background="@color/under_txt_line_color" android:layout_width="fill_parent" android:layout_height="@dimen/height_1dp" />
+            <TextView android:textSize="@dimen/txt_error" android:textColor="@color/txt_color_error" android:gravity="right" android:id="@id/txt_email_error" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/error_sampple" />
+        </FrameLayout>
+        <View android:layout_width="fill_parent" android:layout_height="@dimen/height_40dp" />
+        <android.support.design.widget.TextInputLayout android:textColorHint="@color/txt_color_password" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <EditText android:textSize="@dimen/txt_password_size" android:textColor="@color/txt_color_password" android:textColorHint="@color/txt_color_email" android:id="@id/txt_password_" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/password" android:singleLine="true" android:imeOptions="actionDone" />
+        </android.support.design.widget.TextInputLayout>
+        <FrameLayout android:paddingTop="@dimen/padding_top_4dp" android:paddingBottom="@dimen/padding_bottom_10dp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <View android:background="@color/under_txt_line_color" android:layout_width="fill_parent" android:layout_height="@dimen/height_1dp" />
+            <TextView android:textSize="@dimen/txt_error" android:textColor="@color/txt_color_error" android:gravity="right" android:id="@id/txt_password_error" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/error_sampple" />
+        </FrameLayout>
+        <TextView android:textColor="@color/white_color" android:gravity="right" android:id="@id/txt_forgot" android:paddingBottom="@dimen/padding_bottom_12dp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/forgot" />
+        <Button android:textSize="@dimen/btn_sign_in_txt_size" android:textColor="@color/white_color" android:id="@id/btn_sign_in" android:background="@drawable/sign_in_bg" android:layout_width="fill_parent" android:layout_height="@dimen/height_48dp" android:text="@string/sign_in" android:textAllCaps="false" />
+        <TextView android:textColor="@color/or_sign_in_using_txt_color" android:gravity="center" android:paddingTop="@dimen/padding_top_14dp" android:paddingBottom="@dimen/padding_bottom_38dp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/or_sign_in_using" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:gravity="center" android:layout_width="@dimen/width_46dp" android:layout_height="@dimen/height_46dp">
+                <com.facebook.login.widget.LoginButton android:id="@id/login_button" android:background="@android:color/transparent" android:layout_width="@dimen/width_46dp" android:layout_height="@dimen/height_46dp" android:scaleType="fitCenter" fb:login_text="" fb:logout_text="" />
+                <FrameLayout android:layout_width="@dimen/width_46dp" android:layout_height="@dimen/height_46dp" android:foregroundGravity="center">
+                    <ImageView android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@mipmap/ico_facebook" android:scaleType="fitXY" />
+                </FrameLayout>
+            </RelativeLayout>
+            <View android:layout_width="@dimen/width_10dp" android:layout_height="wrap_content" />
+            <RelativeLayout android:gravity="center" android:layout_width="@dimen/width_46dp" android:layout_height="@dimen/height_46dp">
+                <app.netmediatama.zulu_android.component.TwitterLoginButtonCustom android:id="@id/login_button_twitter" android:background="@android:color/transparent" android:layout_width="@dimen/width_46dp" android:layout_height="@dimen/height_46dp" />
+            </RelativeLayout>
+            <View android:visibility="gone" android:layout_width="@dimen/width_10dp" android:layout_height="wrap_content" />
+            <Button android:id="@id/btn_net_account" android:background="@mipmap/ico_netacc" android:visibility="gone" android:layout_width="@dimen/btn_net_account_width" android:layout_height="@dimen/btn_net_account_height" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

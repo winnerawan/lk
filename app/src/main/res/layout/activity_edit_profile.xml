@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/bg_my_profile" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center" android:layout_gravity="top" android:orientation="horizontal" android:background="@color/color_toolbar" android:paddingRight="@dimen/padding_right_8dp" android:layout_width="fill_parent" android:layout_height="?android:actionBarSize" android:weightSum="1.0">
+        <ImageView android:layout_gravity="center" android:id="@id/left_btn_toolbar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/ico_back" />
+        <TextView android:textSize="@dimen/txt_post" android:textColor="@android:color/white" android:gravity="center|left" android:id="@id/txt_title" android:paddingLeft="@dimen/padding_left_10dp" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/setting_profile" android:layout_weight="1.0" />
+        <TextView android:textSize="@dimen/txt_post" android:textColor="@color/txt_post" android:layout_gravity="center" android:id="@id/right_btn_toolbar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/txt_save" />
+    </LinearLayout>
+    <View android:layout_width="fill_parent" android:layout_height="@dimen/height_50dp" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="@dimen/nol_dp" android:layout_weight="1.0">
+        <RelativeLayout android:paddingLeft="@dimen/padding_left_18dp" android:paddingRight="@dimen/padding_right_18dp" android:layout_width="fill_parent" android:layout_height="@dimen/nol_dp" android:layout_weight="1.0">
+            <RelativeLayout android:id="@id/container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="bottom" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/height_36dp" android:weightSum="1.0">
+                    <View android:background="@color/under_txt_line_color_unselected" android:layout_width="@dimen/nol_dp" android:layout_height="@dimen/height_3dp" android:layout_weight="1.0" />
+                </LinearLayout>
+                <android.support.design.widget.TabLayout android:id="@id/tab_layout" android:layout_width="fill_parent" android:layout_height="@dimen/height_36dp" app:tabIndicatorColor="@color/tabIndicatorColor" app:tabIndicatorHeight="@dimen/height_3dp" app:tabMode="fixed" app:tabGravity="fill" app:tabMaxWidth="@dimen/nol_dp" app:tabTextAppearance="@style/MyCustomTabLayout" app:tabTextColor="@color/tabTextColor" app:tabSelectedTextColor="@color/white_color" />
+                <LinearLayout android:gravity="bottom|center" android:orientation="horizontal" android:id="@id/lyt_for_social_media" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/height_36dp" android:weightSum="4.0">
+                    <View android:background="@color/bg_my_profile" android:layout_width="@dimen/nol_dp" android:layout_height="@dimen/height_3dp" android:layout_weight="1.0" />
+                    <View android:background="@color/tabIndicatorColor" android:layout_width="@dimen/nol_dp" android:layout_height="@dimen/height_3dp" android:layout_weight="2.0" />
+                    <View android:background="@color/bg_my_profile" android:layout_width="@dimen/nol_dp" android:layout_height="@dimen/height_3dp" android:layout_weight="1.0" />
+                </LinearLayout>
+            </RelativeLayout>
+            <android.support.v4.view.ViewPager android:id="@id/view_pager" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/container" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

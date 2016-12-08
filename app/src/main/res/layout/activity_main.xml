@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/rootLayout" android:background="@color/colorPrimary" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center" android:id="@id/zulu" android:paddingTop="@dimen/padding_top_20dp" android:paddingBottom="@dimen/padding_bottom_34dp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_width="@dimen/width_92dp" android:layout_height="@dimen/height_23dp" android:src="@mipmap/zulu_logo" />
+    </LinearLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/nol_dp" android:layout_weight="1.0">
+        <RelativeLayout android:id="@id/container" android:paddingLeft="@dimen/padding_left_18dp" android:paddingRight="@dimen/padding_right_18dp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="bottom" android:layout_width="fill_parent" android:layout_height="@dimen/height_36dp">
+                <View android:background="@color/under_txt_line_color_unselected" android:layout_width="fill_parent" android:layout_height="@dimen/height_3dp" />
+            </LinearLayout>
+            <android.support.design.widget.TabLayout android:id="@id/tab_layout" android:layout_width="fill_parent" android:layout_height="@dimen/height_36dp" app:tabIndicatorColor="@color/tabIndicatorColor" app:tabIndicatorHeight="@dimen/height_3dp" app:tabMode="fixed" app:tabGravity="fill" app:tabMaxWidth="@dimen/nol_dp" app:tabTextAppearance="@style/MyCustomTabLayout" app:tabTextColor="@color/tabTextColor" app:tabSelectedTextColor="@color/white_color" />
+        </RelativeLayout>
+        <android.support.v4.view.ViewPager android:id="@id/view_pager" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/container" />
+    </RelativeLayout>
+</LinearLayout>

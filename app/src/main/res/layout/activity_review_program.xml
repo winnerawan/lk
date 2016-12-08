@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/bg_review_program" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="@dimen/txt_tap_to_Rate" android:textColor="@color/txt_tap_to_Rate" android:paddingTop="@dimen/padding_top_115dp" android:paddingBottom="@dimen/padding_bottom_20dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/txt_tap_to_Rate" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="@dimen/height_52dp">
+            <ImageView android:id="@id/rate_1" android:layout_width="@dimen/width_26dp" android:layout_height="@dimen/height_26dp" android:src="@mipmap/ico_star_inactive" />
+            <View android:layout_width="@dimen/width_17dp" android:layout_height="wrap_content" />
+            <ImageView android:id="@id/rate_2" android:layout_width="@dimen/width_26dp" android:layout_height="@dimen/height_26dp" android:src="@mipmap/ico_star_inactive" />
+            <View android:layout_width="@dimen/width_17dp" android:layout_height="wrap_content" />
+            <ImageView android:id="@id/rate_3" android:layout_width="@dimen/width_26dp" android:layout_height="@dimen/height_26dp" android:src="@mipmap/ico_star_inactive" />
+            <View android:layout_width="@dimen/width_17dp" android:layout_height="wrap_content" />
+            <ImageView android:id="@id/rate_4" android:layout_width="@dimen/width_26dp" android:layout_height="@dimen/height_26dp" android:src="@mipmap/ico_star_inactive" />
+            <View android:layout_width="@dimen/width_17dp" android:layout_height="wrap_content" />
+            <ImageView android:id="@id/rate_5" android:layout_width="@dimen/width_26dp" android:layout_height="@dimen/height_26dp" android:src="@mipmap/ico_star_inactive" />
+        </LinearLayout>
+        <View android:layout_width="fill_parent" android:layout_height="@dimen/height_54dp" />
+        <EditText android:textSize="@dimen/txt_email_size" android:textColor="@color/txt_color_email" android:textColorHint="@color/txt_color_email" android:id="@id/txt_content" android:background="@android:color/transparent" android:paddingLeft="@dimen/padding_left_18dp" android:paddingTop="@dimen/padding_top_4dp" android:paddingRight="@dimen/padding_right_18dp" android:paddingBottom="@dimen/padding_bottom_4dp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/leave_review" android:imeOptions="actionDone" />
+        <LinearLayout android:paddingLeft="@dimen/padding_left_18dp" android:paddingTop="@dimen/padding_top_6dp" android:paddingRight="@dimen/padding_right_18dp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <View android:background="@color/line_adapter_program_Review" android:layout_width="fill_parent" android:layout_height="@dimen/height_1dp" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:layout_gravity="top" android:orientation="horizontal" android:background="@color/color_toolbar" android:paddingRight="@dimen/padding_right_15dp" android:layout_width="fill_parent" android:layout_height="?android:actionBarSize" android:weightSum="1.0">
+        <ImageView android:layout_gravity="center" android:id="@id/left_btn_toolbar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/ico_back" />
+        <TextView android:textSize="@dimen/toolbar_text_title" android:textColor="@android:color/white" android:gravity="center|left" android:id="@id/txt_title" android:paddingLeft="@dimen/padding_left_10dp" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/write_review" android:layout_weight="1.0" />
+        <TextView android:textSize="@dimen/txt_post" android:textColor="@color/txt_post" android:layout_gravity="center" android:id="@id/right_btn_toolbar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/txt_post" />
+    </LinearLayout>
+</FrameLayout>

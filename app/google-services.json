@@ -1,0 +1,115 @@
+{
+  "project_info": {
+    "project_number": "451165188555",
+    "firebase_url": "https://layar-kaca.firebaseio.com",
+    "project_id": "layar-kaca",
+    "storage_bucket": "layar-kaca.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:451165188555:android:c6a779d8db0a6ac9",
+        "android_client_info": {
+          "package_name": "id.biz.wonderwall.layarkaca"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "451165188555-q3moo64kh32fl2dk4pcotv50j5lhrrcv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "id.biz.wonderwall.layarkaca",
+            "certificate_hash": "8F1493929DB5FE2B0C83718C9B34E6227A441993"
+          }
+        },
+        {
+          "client_id": "451165188555-2crha1v4tv1uc2vq8lmafeco57g2erm6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "id.biz.wonderwall.layarkaca",
+            "certificate_hash": "29B5B877652072DBA33A8585E0BFC801094875DE"
+          }
+        },
+        {
+          "client_id": "451165188555-jaslihp8j9gf29ccqpav2dhh7af4e5qo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDP23qGTp6bKKRlY_Q52PY9oEHXEU7wTns"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "451165188555-jaslihp8j9gf29ccqpav2dhh7af4e5qo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:451165188555:android:d8df944d9c72510f",
+        "android_client_info": {
+          "package_name": "net.winnerawan.layarkaca"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "451165188555-dfa9gtlggkl4jt5p4k2rm3qchkg48jpr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "net.winnerawan.layarkaca",
+            "certificate_hash": "81153AA2A15623A8F1108CB14E7E36F5172F9380"
+          }
+        },
+        {
+          "client_id": "451165188555-jrhrhclt4n2bqb5e0muri7cou9e0dhf3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "net.winnerawan.layarkaca",
+            "certificate_hash": "8F1493929DB5FE2B0C83718C9B34E6227A441993"
+          }
+        },
+        {
+          "client_id": "451165188555-jaslihp8j9gf29ccqpav2dhh7af4e5qo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDP23qGTp6bKKRlY_Q52PY9oEHXEU7wTns"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "451165188555-jaslihp8j9gf29ccqpav2dhh7af4e5qo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

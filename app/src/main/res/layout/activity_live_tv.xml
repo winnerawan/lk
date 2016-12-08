@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/bg_live_tv" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/layout_toolbar" />
+    <TextView android:textSize="@dimen/txt_select_chanel" android:textColor="@color/txt_select_chanel" android:gravity="center" android:paddingTop="@dimen/padding_top_22dp" android:paddingBottom="@dimen/padding_bottom_30dp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/select_chanel" />
+    <android.support.v7.widget.RecyclerView android:id="@id/recyclerview_live_tv" android:layout_width="fill_parent" android:layout_height="@dimen/nol_dp" android:layout_weight="1.0" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    <FrameLayout android:id="@id/loading" android:background="@color/bg_search_activity" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ProgressBar android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" />
+    </FrameLayout>
+</LinearLayout>

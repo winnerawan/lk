@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:background="@color/colorPrimary" android:paddingLeft="@dimen/padding_left_28dp" android:paddingTop="@dimen/paddding_top_verification" android:paddingRight="@dimen/padding_right_28dp" android:paddingBottom="@dimen/padding_bottom_17dp" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/txt_verification_size" android:textColor="@color/txt_verivication_color" android:paddingBottom="@dimen/padding_bottom_107dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/verification" />
+    <ImageView android:layout_width="@dimen/width_43dp" android:layout_height="@dimen/height_30dp" android:src="@mipmap/ico_email" />
+    <TextView android:textSize="@dimen/txt_activated_size" android:textColor="@color/txt_activated_color" android:gravity="center_horizontal" android:paddingTop="@dimen/padding_top_102dp" android:paddingBottom="@dimen/padding_bottom_4dp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/just_register" />
+    <TextView android:textSize="@dimen/txt_activated_size" android:textColor="@color/txt_activated_color" android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/nol_dp" android:text="@string/verification_register" android:layout_weight="1.0" />
+    <TextView android:textSize="@dimen/txt_done" android:textColor="@color/txt_done_color" android:gravity="center" android:id="@id/done" android:background="@drawable/done_bg" android:layout_width="fill_parent" android:layout_height="@dimen/height_48dp" android:text="@string/done" />
+</LinearLayout>

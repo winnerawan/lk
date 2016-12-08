@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:background="@android:color/black" android:paddingLeft="@dimen/padding_left_22dp" android:paddingRight="@dimen/padding_right_22dp" android:layout_width="fill_parent" android:layout_height="@dimen/height_56dp">
+            <ImageView android:id="@id/img_search" android:layout_width="@dimen/width_24dp" android:layout_height="@dimen/height_24dp" android:src="@mipmap/ico_search" />
+            <EditText android:textSize="@dimen/txt_search_size" android:textColor="@color/txt_search_color" android:textColorHint="@color/txt_search_color" android:id="@id/txt_search" android:background="@null" android:paddingLeft="@dimen/padding_left_20dp" android:layout_width="@dimen/nol_dp" android:layout_height="wrap_content" android:hint="@string/search" android:singleLine="true" android:layout_weight="1.0" android:imeOptions="actionSearch" />
+            <ImageView android:id="@id/img_close" android:layout_width="@dimen/width_24dp" android:layout_height="@dimen/height_24dp" android:src="@mipmap/ico_close" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/lyt_add_to_your_list" android:background="@color/bg_add_to_your_list" android:paddingLeft="@dimen/padding_left_15dp" android:paddingRight="@dimen/padding_right_15dp" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/height_54dp">
+            <ImageView android:id="@id/img_add_to_your_list" android:layout_width="@dimen/width_25dp" android:layout_height="@dimen/height_25dp" android:src="@mipmap/ico_checklist" />
+            <TextView android:textSize="@dimen/txt_add_to_your_list" android:textColor="@color/white_color" android:id="@id/txt_add_to_your_list" android:paddingLeft="@dimen/padding_left_8dp" android:layout_width="@dimen/nol_dp" android:layout_height="wrap_content" android:text="Tester" android:layout_weight="1.0" />
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout android:orientation="horizontal" android:background="@color/bg_search_activity" android:paddingLeft="@dimen/padding_left_15dp" android:paddingTop="@dimen/padding_top_20dp" android:paddingBottom="@dimen/padding_bottom_15dp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/txt_result" android:textColor="@color/txt_result" android:id="@id/txt_result" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:textSize="@dimen/txt_result_search" android:textColor="@color/txt_result_search" android:id="@id/txt_result_search" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:background="@color/bg_search_activity" android:layout_width="fill_parent" android:layout_height="@dimen/nol_dp" android:layout_weight="1.0">
+        <android.support.v7.widget.RecyclerView android:id="@id/recyclerview_search" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    </LinearLayout>
+    <FrameLayout android:id="@id/loading" android:background="@color/bg_search_activity" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ProgressBar android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" />
+    </FrameLayout>
+</LinearLayout>

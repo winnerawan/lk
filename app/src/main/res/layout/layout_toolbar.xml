@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar android:id="@id/toolbar" android:background="@color/color_toolbar" android:layout_width="fill_parent" android:layout_height="?android:actionBarSize" android:layout_alignParentTop="true" app:contentInsetStart="@dimen/nol_dp" app:contentInsetEnd="@dimen/nol_dp" app:contentInsetLeft="@dimen/nol_dp" app:contentInsetRight="@dimen/nol_dp"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:paddingRight="@dimen/padding_right_8dp" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="1.0">
+        <ImageView android:layout_gravity="center" android:id="@id/left_btn_toolbar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/ico_back" />
+        <TextView android:textSize="@dimen/toolbar_text_title" android:textColor="@android:color/white" android:gravity="center|left" android:id="@id/txt_title" android:paddingLeft="@dimen/padding_left_10dp" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/app_name" android:layout_weight="1.0" />
+        <ImageView android:layout_gravity="center" android:id="@id/right_btn_toolbar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/ico_close" />
+    </LinearLayout>
+</android.support.v7.widget.Toolbar>

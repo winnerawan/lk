@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:paddingTop="@dimen/padding_top_23dp" android:paddingBottom="@dimen/padding_bottom_22dp" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <android.support.design.widget.TextInputLayout android:textColorHint="@color/txt_color_full_name" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <EditText android:textSize="@dimen/txt_full_name_size" android:textColor="@color/txt_color_full_name" android:textColorHint="@color/txt_color_full_name" android:id="@id/txt_full_name" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/full_name" android:singleLine="true" android:inputType="textNoSuggestions" android:imeOptions="actionNext" />
+        </android.support.design.widget.TextInputLayout>
+        <FrameLayout android:paddingTop="@dimen/padding_top_4dp" android:paddingBottom="@dimen/padding_bottom_22dp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <View android:background="@color/under_txt_line_color" android:layout_width="fill_parent" android:layout_height="@dimen/height_1dp" />
+            <TextView android:textSize="@dimen/txt_error" android:textColor="@color/txt_color_error" android:gravity="right" android:id="@id/txt_full_name_error" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/error_sampple" />
+        </FrameLayout>
+        <android.support.design.widget.TextInputLayout android:textColorHint="@color/txt_color_email" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <EditText android:textSize="@dimen/txt_email_address_size" android:textColor="@color/txt_color_email" android:textColorHint="@color/txt_color_email" android:id="@id/txt_email_address" android:background="@android:color/transparent" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/email_address" android:singleLine="true" android:inputType="textNoSuggestions" android:imeOptions="actionNext" />
+        </android.support.design.widget.TextInputLayout>
+        <FrameLayout android:paddingTop="@dimen/padding_top_4dp" android:paddingBottom="@dimen/padding_bottom_22dp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <View android:background="@color/under_txt_line_color" android:layout_width="fill_parent" android:layout_height="@dimen/height_1dp" />
+            <TextView android:textSize="@dimen/txt_error" android:textColor="@color/txt_color_error" android:gravity="right" android:id="@id/txt_email_address_error" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/error_sampple" />
+        </FrameLayout>
+        <android.support.design.widget.TextInputLayout android:textColorHint="@color/txt_color_birth_date" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <EditText android:textSize="@dimen/txt_birth_date_size" android:textColor="@color/txt_color_birth_date" android:textColorHint="@color/txt_color_birth_date" android:id="@id/txt_birth_date" android:background="@android:color/transparent" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/birthdate" android:singleLine="true" android:inputType="textNoSuggestions" android:imeOptions="actionNext" />
+        </android.support.design.widget.TextInputLayout>
+        <FrameLayout android:paddingTop="@dimen/padding_top_4dp" android:paddingBottom="@dimen/padding_bottom_22dp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <View android:background="@color/under_txt_line_color" android:layout_width="fill_parent" android:layout_height="@dimen/height_1dp" />
+            <TextView android:textSize="@dimen/txt_error" android:textColor="@color/txt_color_error" android:gravity="right" android:id="@id/txt_birth_date_error" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/error_sampple" />
+        </FrameLayout>
+        <android.support.design.widget.TextInputLayout android:textColorHint="@color/txt_color_birth_date" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <EditText android:textSize="@dimen/txt_birth_date_size" android:textColor="@color/txt_color_birth_date" android:textColorHint="@color/txt_color_birth_date" android:id="@id/txt_phone" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/phone" android:singleLine="true" android:inputType="number" android:imeOptions="actionDone" />
+        </android.support.design.widget.TextInputLayout>
+        <FrameLayout android:paddingTop="@dimen/padding_top_4dp" android:paddingBottom="@dimen/padding_bottom_22dp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <View android:background="@color/under_txt_line_color" android:layout_width="fill_parent" android:layout_height="@dimen/height_1dp" />
+            <TextView android:textSize="@dimen/txt_error" android:textColor="@color/txt_color_error" android:gravity="right" android:id="@id/txt_phone_error" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/error_sampple" />
+        </FrameLayout>
+        <TextView android:textColor="@color/txt_color_gender" android:textColorHint="@color/txt_color_gender" android:background="@android:color/transparent" android:paddingTop="@dimen/padding_top_14dp" android:paddingBottom="@dimen/padding_bottom_10dp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/gender" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center_vertical" android:id="@id/lyt_male" android:layout_width="@dimen/nol_dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <ImageView android:id="@id/img_male" android:layout_width="@dimen/width_12dp" android:layout_height="@dimen/height_12dp" android:src="@mipmap/group_2" />
+                <TextView android:textColor="@color/radioMale_txt_color" android:paddingLeft="@dimen/padding_left_10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/radio_male" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:id="@id/lyt_female" android:layout_width="@dimen/nol_dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <ImageView android:id="@id/img_female" android:layout_width="@dimen/width_12dp" android:layout_height="@dimen/height_12dp" android:src="@mipmap/group_21" />
+                <TextView android:textColor="@color/radioFemale_txt_color" android:paddingLeft="@dimen/padding_left_10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/radio_female" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/bg_my_profile" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include layout="@layout/layout_toolbar" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/lyt_add_to_your_list" android:background="@color/bg_add_to_your_list" android:paddingLeft="@dimen/padding_left_15dp" android:paddingRight="@dimen/padding_right_15dp" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/height_54dp">
+            <ImageView android:id="@id/img_add_to_your_list" android:layout_width="@dimen/width_25dp" android:layout_height="@dimen/height_25dp" android:src="@mipmap/ico_checklist" />
+            <TextView android:textSize="@dimen/txt_add_to_your_list" android:textColor="@color/white_color" android:id="@id/txt_add_to_your_list" android:paddingLeft="@dimen/padding_left_8dp" android:layout_width="@dimen/nol_dp" android:layout_height="wrap_content" android:text="Tester" android:layout_weight="1.0" />
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:paddingTop="@dimen/padding_top_20dp" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <net.winnerawan.layarkaca.helper.CircledNetworkImageView android:id="@id/img_profile" android:layout_width="@dimen/width_100dp" android:layout_height="@dimen/height_100dp" app:civ_border_width="@dimen/img_border" app:civ_border_color="@color/img_border" xmlns:app="http://schemas.android.com/apk/res-auto" />
+        <TextView android:textSize="@dimen/txt_name_size" android:textColor="@color/txt_name" android:gravity="center" android:id="@id/txt_name" android:paddingTop="@dimen/padding_top_15dp" android:paddingBottom="@dimen/padding_bottom_5dp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/name" />
+        <TextView android:textSize="@dimen/txt_member_size" android:textColor="@color/txt_member" android:gravity="center" android:id="@id/txt_member" android:paddingBottom="@dimen/padding_bottom_47dp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/member" />
+        <TextView android:textSize="@dimen/txt_my_watch_list" android:textStyle="bold" android:textColor="@color/txt_my_watch_list" android:padding="@dimen/padding_8dp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/txt_my_watch_list" />
+        <android.support.v7.widget.RecyclerView android:id="@id/recyclerview" android:padding="@dimen/padding_2dp" android:layout_width="fill_parent" android:layout_height="0.0dip" android:minHeight="@dimen/height_480dp" android:layout_weight="1.0" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    </LinearLayout>
+</LinearLayout>

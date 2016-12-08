@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/colorPrimary" android:paddingLeft="@dimen/activity_horizontal_margin" android:paddingTop="@dimen/activity_vertical_margin" android:paddingRight="@dimen/activity_horizontal_margin" android:paddingBottom="@dimen/activity_vertical_margin" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:paddingTop="@dimen/padding_top_23dp" android:layout_width="fill_parent" android:layout_height="fill_parent"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <android.support.design.widget.TextInputLayout android:textColorHint="@color/txt_color_email" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <EditText android:textColor="@color/txt_color_email" android:textColorHint="@color/txt_color_email" android:id="@id/txt_email_address" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/email_address" android:singleLine="true" android:imeOptions="actionNext" />
+            </android.support.design.widget.TextInputLayout>
+            <FrameLayout android:paddingTop="@dimen/padding_top_6dp" android:paddingBottom="@dimen/padding_bottom_22dp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <View android:background="@color/under_txt_line_color" android:layout_width="fill_parent" android:layout_height="@dimen/height_1dp" />
+                <TextView android:textSize="@dimen/txt_error" android:textColor="@color/txt_color_error" android:gravity="right" android:id="@id/txt_email_address_error" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/error_sampple" />
+            </FrameLayout>
+            <android.support.design.widget.TextInputLayout android:textColorHint="@color/txt_color_full_name" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <EditText android:textColor="@color/txt_color_full_name" android:textColorHint="@color/txt_color_full_name" android:id="@id/txt_full_name" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/full_name" android:singleLine="true" android:imeOptions="actionNext" />
+            </android.support.design.widget.TextInputLayout>
+            <FrameLayout android:paddingTop="@dimen/padding_top_6dp" android:paddingBottom="@dimen/padding_bottom_22dp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <View android:background="@color/under_txt_line_color" android:layout_width="fill_parent" android:layout_height="@dimen/height_1dp" />
+                <TextView android:textSize="@dimen/txt_error" android:textColor="@color/txt_color_error" android:gravity="right" android:id="@id/txt_full_name_error" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/error_sampple" />
+            </FrameLayout>
+            <android.support.design.widget.TextInputLayout android:textColorHint="@color/txt_color_birth_date" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <EditText android:textColor="@color/txt_color_birth_date" android:textColorHint="@color/txt_color_birth_date" android:id="@id/txt_birth_date" android:background="@android:color/transparent" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/birthdate" android:singleLine="true" />
+            </android.support.design.widget.TextInputLayout>
+            <FrameLayout android:paddingTop="@dimen/padding_top_6dp" android:paddingBottom="@dimen/padding_bottom_22dp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <View android:background="@color/under_txt_line_color" android:layout_width="fill_parent" android:layout_height="@dimen/height_1dp" />
+                <TextView android:textSize="@dimen/txt_error" android:textColor="@color/txt_color_error" android:gravity="right" android:id="@id/txt_birth_date_error" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/error_sampple" />
+            </FrameLayout>
+            <TextView android:textColor="@color/txt_color_gender" android:textColorHint="@color/txt_color_gender" android:background="@android:color/transparent" android:paddingTop="@dimen/padding_top_14dp" android:paddingBottom="@dimen/padding_bottom_10dp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/gender" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="center_vertical" android:id="@id/lyt_male" android:layout_width="@dimen/nol_dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <ImageView android:id="@id/img_male" android:layout_width="@dimen/width_12dp" android:layout_height="@dimen/height_12dp" android:src="@mipmap/group_2" />
+                    <TextView android:textColor="@color/radioMale_txt_color" android:paddingLeft="@dimen/padding_left_10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/radio_male" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:id="@id/lyt_female" android:layout_width="@dimen/nol_dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <ImageView android:id="@id/img_female" android:layout_width="@dimen/width_12dp" android:layout_height="@dimen/height_12dp" android:src="@mipmap/group_21" />
+                    <TextView android:textColor="@color/radioFemale_txt_color" android:paddingLeft="@dimen/padding_left_10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/radio_female" />
+                </LinearLayout>
+            </LinearLayout>
+            <View android:layout_width="fill_parent" android:layout_height="@dimen/height_34dp" />
+            <Button android:textSize="@dimen/btn_next_register_txt_size" android:textColor="@color/white_color" android:id="@id/btn_next" android:background="@drawable/next_register" android:layout_width="fill_parent" android:layout_height="@dimen/height_55dp" android:text="@string/next" android:textAllCaps="false" />
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

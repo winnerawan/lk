@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center" android:id="@id/lyt_container_home_adapter" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/img_content" android:layout_width="fill_parent" android:layout_height="@dimen/height_img_head_line" android:scaleType="centerCrop" />
+    <ImageView android:layout_width="fill_parent" android:layout_height="@dimen/height_img_head_line" android:src="@mipmap/gradasi2" android:scaleType="fitXY" />
+    <LinearLayout android:gravity="right" android:padding="@dimen/padding_15dp" android:layout_width="fill_parent" android:layout_height="@dimen/height_img_head_line">
+        <TextView android:textSize="@dimen/txt_exclusive" android:textColor="@color/txt_exclusive" android:gravity="center" android:id="@id/txt_exclusive" android:background="@drawable/ekslusif" android:paddingLeft="@dimen/padding_left_8dp" android:paddingTop="@dimen/padding_top_2dp" android:paddingRight="@dimen/padding_right_8dp" android:paddingBottom="@dimen/padding_bottom_2dp" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ekslusif" />
+    </LinearLayout>
+    <LinearLayout android:gravity="bottom" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/height_img_head_line">
+        <LinearLayout android:gravity="bottom|center|left" android:orientation="vertical" android:paddingLeft="@dimen/padding_left_10dp" android:paddingBottom="@dimen/padding_bottom_22dp" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/txt_trailer" android:textStyle="bold" android:textColor="@color/txt_trailer" android:id="@id/txt_trailer" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/trailer" />
+            <TextView android:textSize="@dimen/txt_season_headline" android:textColor="@color/txt_title" android:id="@id/txt_season" android:paddingTop="@dimen/padding_top_4dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sample_sub_title" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="5.0">
+                <TextView android:textSize="@dimen/txt_title_headline" android:textStyle="bold" android:textColor="@color/txt_title" android:ellipsize="end" android:id="@id/txt_title" android:layout_width="@dimen/nol_dp" android:layout_height="wrap_content" android:text="@string/sample_sub_title" android:layout_weight="4.0" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="bottom|center|right" android:paddingRight="@dimen/padding_right_18dp" android:paddingBottom="@dimen/padding_bottom_22dp" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <ImageView android:id="@id/img_add_to_my_list" android:layout_width="@dimen/width_24dp" android:layout_height="@dimen/height_24dp" android:src="@mipmap/ico_addtomylist" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

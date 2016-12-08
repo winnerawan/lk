@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="?android:selectableItemBackground" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:swipe="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:background="@color/bg_continue_watching_list" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="@dimen/height_img_content">
+                <ImageView android:id="@id/img_content" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@mipmap/ic_launcher" android:scaleType="centerCrop" />
+                <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/play_mini" />
+                </FrameLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>
