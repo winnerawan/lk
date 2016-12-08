@@ -1,14 +1,15 @@
-/*
 package net.winnerawan.layarkaca.adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import net.winnerawan.layarkaca.fragment.HomeFragment;
+
 /**
  * Created by winnerawan on 12/7/16.
  */
-/*
+
 public class FeedAdapter extends FragmentPagerAdapter {
 
 
@@ -31,7 +32,7 @@ public class FeedAdapter extends FragmentPagerAdapter {
             default:
                 return null;
             case 0:
-                //return new HomeFragment();
+                return new HomeFragment();
             case 1:
                 //return new RecentlyAddedFragment();
             case 2:
@@ -42,6 +43,7 @@ public class FeedAdapter extends FragmentPagerAdapter {
                 //return new SimilarTitleForYouFragment();
         }
         //return new EspeciallyForYouFragment();
+        return new HomeFragment();
     }
 
     public int getItemPosition(Object paramObject) {
@@ -68,4 +70,3 @@ public class FeedAdapter extends FragmentPagerAdapter {
         //return "Especially For You";
     }
 }
-*/

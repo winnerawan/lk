@@ -34,6 +34,7 @@ public class MoreActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_more);
         ButterKnife.bind(this);
+        overridePendingTransition(R.anim.anim_pop_down, R.anim.anim_push_down);
 
         session = new SessionManager(getApplicationContext());
         db = new SQLiteHandler(getApplicationContext());

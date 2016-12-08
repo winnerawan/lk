@@ -74,7 +74,7 @@ public class PrivacyPolicyActivity extends AppCompatActivity {
                 PrivacyPolicyActivity.this.finishAction();
             }
         });
-        ((ImageView)findViewById(R.id.right_btn_toolbar)).setVisibility(View.VISIBLE);
+        ((ImageView)findViewById(R.id.right_btn_toolbar)).setVisibility(View.INVISIBLE);
         ((TextView)findViewById(R.id.txt_title)).setText("Privacy & Policy");
     }
 
