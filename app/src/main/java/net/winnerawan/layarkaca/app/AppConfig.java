@@ -13,11 +13,14 @@ package net.winnerawan.layarkaca.app;
 public class AppConfig {
 
     /**
-     * @see
+     * movie
      */
+
+    public final static String BASE_URL = "http://api.layarkaca.wonderwall.biz.id";
+
     public final static String URL_ALL_MOVIES = "";
 
-    public final static String URL_NEW_MOVIES = "";
+    public final static String URL_NEW_MOVIES = "http://api.layarkaca.wonderwall.biz.id/v1/newMovies";
 
     public final static String URL_POPULER_MOVIES = "";
 
@@ -29,6 +32,8 @@ public class AppConfig {
     public final static String URL_NEW_SERIAL_MOVIES = "";
 
     public final static String URL_POPULER_SERIAL_MOVIES = "";
+
+    public static final String RESTRICTED_CONTENT = "http://api.layarkaca.wonderwall.biz.id/v1/RESTRICTED.json";
 
     // global topic to receive app wide push notifications
     public static final String TOPIC_GLOBAL = "global";

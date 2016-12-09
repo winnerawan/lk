@@ -5,7 +5,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.content.LocalBroadcastManager;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -15,13 +19,21 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.astuetz.PagerSlidingTabStrip;
 import com.google.firebase.messaging.FirebaseMessaging;
 
 import net.winnerawan.layarkaca.R;
 import net.winnerawan.layarkaca.adapter.HomeAdapter;
 import net.winnerawan.layarkaca.app.AppConfig;
 import net.winnerawan.layarkaca.component.NonSwipeableViewPager;
+import net.winnerawan.layarkaca.fragment.NewMovieFragment;
+import net.winnerawan.layarkaca.fragment.RestrictedFragment;
+import net.winnerawan.layarkaca.helper.SQLiteHandler;
 import net.winnerawan.layarkaca.util.NotificationUtils;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -32,7 +44,10 @@ public class HomeActivity extends AppCompatActivity {
     private BroadcastReceiver mRegistrationBroadcastReceiver;
     private HomeAdapter homeAdapter;
 
-    @Bind(R.id.pagerHome) NonSwipeableViewPager pagerHome;
+    private String AGE;
+    private SQLiteHandler db;
+
+    @Bind(R.id.pagerHome) ViewPager pagerHome;
     @Bind(R.id.f_btn_explorer) FrameLayout f_btn_explorer;
     @Bind(R.id.f_btn_continue_watching) FrameLayout f_btn_continue_watching;
     @Bind(R.id.f_btn_search) FrameLayout f_btn_search;
@@ -48,7 +63,18 @@ public class HomeActivity extends AppCompatActivity {
         Log.e("TAG", "HOME_ACTIVITY");
         ButterKnife.bind(this);
         //initAndSetAdapter();
-        pagerHome.setOffscreenPageLimit(3);
+        //pagerHome.setOffscreenPageLimit(3);
+
+        db = new SQLiteHandler(getApplicationContext());
+        HashMap<String, String> user = db.getUserDetails();
+        AGE = user.get("age");
+
+        pagerHome.setAdapter(new SampleFragmentPagerAdapter(getSupportFragmentManager()));
+        // Give the PagerSlidingTabStrip the ViewPager
+        PagerSlidingTabStrip tabsStrip = (PagerSlidingTabStrip) findViewById(R.id.tabs);
+        // Attach the view pager to the tab strip
+        tabsStrip.setViewPager(pagerHome);
+        //setupViewPager(pagerHome);
 
         mRegistrationBroadcastReceiver = new BroadcastReceiver() {
             @Override
@@ -159,6 +185,49 @@ public class HomeActivity extends AppCompatActivity {
     protected void onPause() {
         LocalBroadcastManager.getInstance(this).unregisterReceiver(mRegistrationBroadcastReceiver);
         super.onPause();
+    }
+
+    public class SampleFragmentPagerAdapter extends FragmentPagerAdapter {
+        final int PAGE_COUNT = 3;
+
+        public SampleFragmentPagerAdapter(FragmentManager fm) {
+            super(fm);
+        }
+        @Override
+        public CharSequence getPageTitle(int position) {
+            switch (position){
+                case 0: // Fragment # 0 - This will show FirstFragment
+                    return getResources().getString(R.string.new_movies);
+                case 1: // Fragment # 0 - This will show FirstFragment different title
+                    return getResources().getString(R.string.populer_movies);
+                case 2: // Fragment # 0 - This will show FirstFragment different title
+                    return "18+";
+                default:
+                    return getResources().getString(R.string.new_movies);
+            }
+        }
+
+        @Override
+        public int getCount() {
+            return PAGE_COUNT;
+        }
+
+        @Override
+        public Fragment getItem(int position) {
+            switch (position) {
+                case 0: // Fragment # 0 - This will show FirstFragment
+                    return new NewMovieFragment();
+                case 1: // Fragment # 0 - This will show FirstFragment different title
+                    //return new FragmentAyam();
+                case 2:
+                    //return new FragmentKueBasah();
+                case 3:
+                    return new RestrictedFragment();
+                default:
+                    //return new FragmentMasakan();
+                    return new NewMovieFragment();
+            }
+        }
     }
 
 }

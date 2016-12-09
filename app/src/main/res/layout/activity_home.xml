@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:orientation="vertical"
+<LinearLayout android:orientation="vertical"
     android:background="@color/colorPrimary"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <RelativeLayout
         android:layout_width="fill_parent"
@@ -39,7 +39,18 @@
         </LinearLayout>
     </RelativeLayout>
 
-    <net.winnerawan.layarkaca.component.NonSwipeableViewPager
+    <com.astuetz.PagerSlidingTabStrip
+        android:id="@+id/tabs"
+        app:pstsShouldExpand="true"
+        app:pstsTextAllCaps="true"
+        app:pstsIndicatorHeight="2dip"
+        android:elevation="5dp"
+        app:pstsIndicatorColor="@color/colorAccent"
+        android:layout_width="match_parent"
+        android:layout_height="35dp">
+    </com.astuetz.PagerSlidingTabStrip>
+
+    <android.support.v4.view.ViewPager
         android:id="@+id/pagerHome"
         android:background="@android:color/transparent"
         android:layout_width="fill_parent"

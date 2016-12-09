@@ -1,8 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <ProgressBar android:id="@id/loading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" />
-    <android.support.v4.widget.SwipeRefreshLayout android:id="@id/swipe" android:layout_width="fill_parent" android:layout_height="@dimen/nol_dp" android:layout_weight="1.0">
-        <android.support.v7.widget.RecyclerView android:id="@id/recyclerview_home" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+<LinearLayout
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ProgressBar android:id="@id/loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@id/swipe"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/nol_dp"
+        android:layout_weight="1.0">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@id/recyclerview_home"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
     </android.support.v4.widget.SwipeRefreshLayout>
 </LinearLayout>

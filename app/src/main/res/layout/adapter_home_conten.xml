@@ -1,12 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout android:gravity="center" android:id="@id/lyt_container_home_adapter" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:id="@id/img_content" android:layout_width="fill_parent" android:layout_height="@dimen/height_img_content" android:scaleType="centerCrop" />
+    <com.android.volley.toolbox.NetworkImageView android:id="@id/img_content" android:layout_width="fill_parent" android:layout_height="@dimen/height_img_content" android:scaleType="centerCrop" />
     <ImageView android:layout_width="fill_parent" android:layout_height="@dimen/height_img_content" android:src="@mipmap/gradasi2" android:scaleType="fitXY" />
     <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/height_img_content">
         <LinearLayout android:gravity="right" android:padding="@dimen/padding_18dp" android:layout_width="fill_parent" android:layout_height="fill_parent">
-            <FrameLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/lyt_episode" android:background="@drawable/episode_bg" android:layout_width="@dimen/width_74dp" android:layout_height="@dimen/height_22dp">
-                <TextView android:textSize="@dimen/txt_episode_size" android:textColor="@color/sample_episode" android:layout_gravity="center" android:id="@id/txt_episode" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sample_episode" />
+            <FrameLayout
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:id="@id/lyt_episode"
+                android:background="@drawable/episode_bg"
+                android:layout_width="@dimen/width_74dp"
+                android:layout_height="@dimen/height_22dp">
+
+                <TextView
+                    android:textSize="@dimen/txt_episode_size"
+                    android:textColor="@color/sample_episode"
+                    android:layout_gravity="center"
+                    android:id="@id/txt_episode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sample_episode" />
             </FrameLayout>
         </LinearLayout>
         <LinearLayout android:gravity="bottom|center|right" android:paddingRight="@dimen/padding_right_18dp" android:paddingBottom="@dimen/padding_bottom_18dp" android:layout_width="fill_parent" android:layout_height="fill_parent">
