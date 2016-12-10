@@ -50,7 +50,7 @@
         <activity android:name=".activity.PrivacyPolicyActivity" />
         <activity android:name=".activity.MyProfileActivity" />
         <activity android:name=".activity.TermConditionActivity" />
-        <activity android:name=".activity.SessionMovieActivity"/>
+        <activity android:name=".activity.SessionMovieActivity" />
 
         <!-- Firebase Notifications -->
         <service android:name=".service.MyFirebaseMessagingService">
@@ -58,13 +58,13 @@
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-
         <service android:name=".service.MyFirebaseInstanceIDService">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
         <!-- ./Firebase Notifications -->
+        <activity android:name=".activity.DetailMovieActivity"></activity>
     </application>
 
 </manifest>

@@ -24,6 +24,9 @@ public class Movie {
     @SerializedName("image")
     @Expose
     private String image;
+    @SerializedName("poster")
+    @Expose
+    private String poster;
     @SerializedName("trailer")
     @Expose
     private String trailer;
@@ -69,12 +72,13 @@ public class Movie {
         public Movie() {
         }
 
-        public Movie(Integer id, String title, String image, String trailer, String genre, String director, String quality,
+        public Movie(Integer id, String title, String image, String poster, String trailer, String genre, String director, String quality,
                      String release, String actor, String country, Double imdbRating, String duration, String synopsis,
                      String postDate, String link360, String link480, String link720) {
             this.id=id;
             this.title=title;
             this.image=image;
+            this.poster=poster;
             this.trailer=trailer;
             this.genre=genre;
             this.director=director;
@@ -113,6 +117,14 @@ public class Movie {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public String getPoster() {
+        return poster;
+    }
+
+    public void setPoster(String poster) {
+        this.poster = poster;
     }
 
     public String getTrailer() {
@@ -195,11 +207,11 @@ public class Movie {
         this.synopsis = synopsis;
     }
 
-    public String getPost_date() {
+    public String getPostDate() {
         return postDate;
     }
 
-    public void setPost_date(String postDate) {
+    public void setPostDate(String postDate) {
         this.postDate = postDate;
     }
 

@@ -233,4 +233,8 @@ MOVIE &amp; MORE."</string>
     <string name="on_cancel_login">Entrance was canceled!</string>
     <string name="new_movies">New Movies</string>
     <string name="populer_movies">Populer Movies</string>
+    <string name="about_movies">About</string>
+    <string name="trailer_movies">Trailer</string>
+    <string name="review_movies">Review</string>
+    <string name="watch_movies">Watch Movie</string>
 </resources>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <item name="item_click_support" type="id" />
     <item type="id" name="action_bar_activity_content" />
     <item type="id" name="action_bar_spinner" />
     <item type="id" name="action_menu_divider" />
