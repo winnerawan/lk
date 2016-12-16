@@ -167,8 +167,12 @@ upper &amp; lower case letters and at least one numbers"</string>
     <string name="sample_description2">Tetangga Masa Gitu? Merupakan sitkom yang menampilkan kehidupan sehari-hari 2 pasangan suami istri. Pasangan yang pertama sudah menikah sekitar 10 tahun, sedangkan pasangan kedua baru saja menikah 8 hari. Pasangan ini tinggal dalam satu kompleks dan hidup bertetangga.</string>
     <string name="sample_episode" />
     <string name="sample_genre" />
-    <string name="sample_season">Season 1</string>
+    <string name="sample_season">Season</string>
     <string name="sample_session" />
+    <string name="admob_app_id">ca-app-pub-5062659998443194~5989100668</string>
+    <string name="ad_unit_id_native">ca-app-pub-5062659998443194/5849499861</string>
+    <string name="ad_unit_id_native_second">ca-app-pub-5062659998443194/1013844266</string>
+    <string name="ad_unit_banner">ca-app-pub-5062659998443194/2490577466</string>
     <string name="sample_sub_title" />
     <string name="sample_time" />
     <string name="sample_title" />
@@ -218,7 +222,7 @@ and at least one numbers"</string>
 
 Setiap orang dapat mengakses "<b>aplikasi ini</b> dengan terlebih dahulu melakukan login dengan sosial media <b>GOOGLE+ , FACEBOOK, atau TWITTER</b>, dan secara otomatis akan terikat dengan  <b>syarat dan ketentuan aplikasi ini</b>" termasuk dan tidak terbatas setiap perubahannya yang dimungkinkan terjadi dimasa yang akan datang.
 
-Bagi member pengguna "<b>aplikasi ini</b> jika ingin memberikan saran silahkan kirim melalui email <b>support@wonderwall.biz.id</b>" "</string>
+Bagi member pengguna "<b>aplikasi ini</b> jika ingin memberikan saran silahkan kirim melalui email <b>support@winnerawan.net</b>" "</string>
     <string name="txt_total_rating">4.4 ( 980 rating )</string>
     <string name="verification">ZULU VERIFICATION</string>
     <string name="verification_register">"Please check your email to activate
@@ -237,4 +241,6 @@ MOVIE &amp; MORE."</string>
     <string name="trailer_movies">Trailer</string>
     <string name="review_movies">Review</string>
     <string name="watch_movies">Watch Movie</string>
+    <string name="download">Download</string>
+    <string name="error_player">There was an error initializing the YouTubePlayer (%1$s)</string>
 </resources>

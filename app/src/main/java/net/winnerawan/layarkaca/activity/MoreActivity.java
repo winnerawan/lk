@@ -73,6 +73,12 @@ public class MoreActivity extends AppCompatActivity {
                 goToTermConditionActivity();
             }
         });
+        txt_live_tv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goToStreamTV();
+            }
+        });
     }
 
     private void finishAction() {
@@ -105,6 +111,10 @@ public class MoreActivity extends AppCompatActivity {
     private void goToTermConditionActivity()
     {
         startActivity(new Intent(this, TermConditionActivity.class));
+    }
+
+    private void goToStreamTV() {
+        startActivity(new Intent(this, TVStreamActivity.class));
     }
 }
 

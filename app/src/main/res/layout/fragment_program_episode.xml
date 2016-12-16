@@ -5,7 +5,7 @@
         <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
             <ProgressBar android:id="@id/loading2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" />
             <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/height_480dp">
-                <ImageView android:id="@id/img_content" android:layout_width="fill_parent" android:layout_height="@dimen/height_480dp" android:scaleType="centerCrop" />
+                <com.android.volley.toolbox.NetworkImageView android:id="@id/img_content" android:layout_width="fill_parent" android:layout_height="@dimen/height_480dp" android:scaleType="centerCrop" />
                 <ImageView android:id="@id/degradasi2" android:layout_width="fill_parent" android:layout_height="@dimen/height_480dp" android:src="@mipmap/gradasi" android:scaleType="fitXY" />
                 <FrameLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="@dimen/height_480dp">
                     <ImageView android:layout_gravity="center" android:visibility="gone" android:layout_width="@dimen/width_46dp" android:layout_height="@dimen/height_46dp" android:src="@mipmap/play_mini" />

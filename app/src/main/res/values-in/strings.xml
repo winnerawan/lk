@@ -237,4 +237,7 @@ MOVIE &amp; MORE."</string>
     <string name="trailer_movies">Trailer</string>
     <string name="review_movies">Review</string>
     <string name="watch_movies">Watch Movie</string>
+    <string name="download">Download</string>
+    <string name="error_player">There was an error initializing the YouTubePlayer (%1$s)</string>
+
 </resources>

@@ -125,7 +125,13 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
                             startActivity(intent);
                             finish();
                             session.setLogin(true);
-                            // TODO -> insert sqlite
+                            FirebaseUser fuser = mAuth.getCurrentUser();
+                            String nama = fuser.getDisplayName();
+                            String email = fuser.getEmail();
+                            String poto = String.valueOf(fuser.getPhotoUrl());
+                            int umur = 17;
+                            db = new SQLiteHandler(getApplicationContext());
+                            db.addUser(nama, email, poto, umur, "", "");
                             DialogUtils.dismissProgressDialog();
                         }
                     }
@@ -417,7 +423,6 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
                             startActivity(intent);
                             finish();
                             session.setLogin(true);
-                            // TODO -> insert sqlite
                         }
                         DialogUtils.dismissProgressDialog();
                     }
@@ -454,7 +459,6 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
                             finish();
                             session = new SessionManager(getApplicationContext());
                             session.setLogin(true);
-                            // TODO -> insert sqlite
                         }
                         DialogUtils.dismissProgressDialog();
                     }

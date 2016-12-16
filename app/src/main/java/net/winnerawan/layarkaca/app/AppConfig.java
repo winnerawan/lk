@@ -16,6 +16,8 @@ public class AppConfig {
      * movie
      */
 
+    public final static String YOUTUBE_API_KEY = "AIzaSyCA7RoaocAl86P2aBh3tkU3eGT1Uh-Tvbo";
+
     public final static String BASE_URL = "http://api.layarkaca.wonderwall.biz.id";
 
     public final static String URL_ALL_MOVIES = "";
@@ -33,7 +35,7 @@ public class AppConfig {
 
     public final static String URL_POPULER_SERIAL_MOVIES = "";
 
-    public static final String RESTRICTED_CONTENT = "http://api.layarkaca.wonderwall.biz.id/v1/RESTRICTED.json";
+    public static final String RESTRICTED_CONTENT = "http://api.layarkaca.wonderwall.biz.id/v1/restricted.png";
 
     // global topic to receive app wide push notifications
     public static final String TOPIC_GLOBAL = "global";

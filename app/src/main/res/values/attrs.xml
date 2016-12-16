@@ -53,6 +53,7 @@
     <attr name="seekBarStyle" format="reference" />
     <attr name="allowStacking" format="boolean" />
 
+
     <attr name="buyButtonText">
         <enum name="book_now" value="3" />
         <enum name="buy_now" value="2" />

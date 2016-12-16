@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
+    android:id="@+id/fm_home"
     android:gravity="center_horizontal"
     android:orientation="vertical"
     android:layout_width="fill_parent"

@@ -14,13 +14,19 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.View;
+import android.widget.ImageView;
 
 import com.astuetz.PagerSlidingTabStrip;
 
 import net.winnerawan.layarkaca.R;
 import net.winnerawan.layarkaca.fragment.AboutMovieFragment;
+import net.winnerawan.layarkaca.fragment.DownloadFragment;
 import net.winnerawan.layarkaca.fragment.NewMovieFragment;
 import net.winnerawan.layarkaca.fragment.RestrictedFragment;
+import net.winnerawan.layarkaca.fragment.ReviewFragment;
+import net.winnerawan.layarkaca.fragment.TrailerFragment;
+import net.winnerawan.layarkaca.fragment.WatchMovieFragment;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -33,11 +39,13 @@ public class DetailMovieActivity extends AppCompatActivity {
     @Bind(R.id.toolbar) Toolbar toolbar;
     @Bind(R.id.tab_layout_explorer) PagerSlidingTabStrip tabs;
     @Bind(R.id.view_pager_explorer) ViewPager viewPager;
+    @Bind(R.id.right_btn_toolbar) ImageView cross;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_program);
         ButterKnife.bind(this);
+        overridePendingTransition(R.anim.anim_pop_up, R.anim.anim_push_up);
         setSupportActionBar(toolbar);
 
         Bundle bundle = getIntent().getExtras();
@@ -48,6 +56,7 @@ public class DetailMovieActivity extends AppCompatActivity {
 
         String title = bundle.getString("title");
         String image = bundle.getString("image");
+        cross.setVisibility(View.GONE);
 
         Log.e(TAG, "id = "+movie_id);
 
@@ -56,7 +65,7 @@ public class DetailMovieActivity extends AppCompatActivity {
     }
 
     public class SampleFragmentPagerAdapter extends FragmentPagerAdapter {
-        final int PAGE_COUNT = 4;
+        final int PAGE_COUNT = 5;
 
         public SampleFragmentPagerAdapter(FragmentManager fm) {
             super(fm);
@@ -70,9 +79,11 @@ public class DetailMovieActivity extends AppCompatActivity {
                 case 1: // Fragment # 0 - This will show FirstFragment different title
                     return getResources().getString(R.string.trailer_movies);
                 case 2: // Fragment # 0 - This will show FirstFragment different title
-                    return getResources().getString(R.string.review_movies);
-                case 3: // Fragment # 0 - This will show FirstFragment different title
                     return getResources().getString(R.string.watch_movies);
+                case 3: // Fragment # 0 - This will show FirstFragment different title
+                    return getResources().getString(R.string.download);
+                case 4: // Fragment # 0 - This will show FirstFragment different title
+                    return getResources().getString(R.string.review_movies);
                 default:
                     return getResources().getString(R.string.about_movies);
             }
@@ -89,15 +100,26 @@ public class DetailMovieActivity extends AppCompatActivity {
                 case 0: // Fragment # 0 - This will show FirstFragment
                     return new AboutMovieFragment();
                 case 1: // Fragment # 0 - This will show FirstFragment different title
-                    //return new FragmentAyam();
+                    return new TrailerFragment();
                 case 2:
-                    //return new FragmentKueBasah();
+                    return new WatchMovieFragment();
                 case 3:
-                    return new RestrictedFragment();
+                    return new DownloadFragment();
+                case 4:
+                    return new ReviewFragment();
                 default:
                     //return new FragmentMasakan();
                     return new AboutMovieFragment();
             }
         }
+    }
+
+    private void finishAction() {
+        finish();
+        overridePendingTransition(R.anim.anim_pop_down, R.anim.anim_push_down);
+    }
+
+    public void onBackPressed() {
+        finishAction();
     }
 }

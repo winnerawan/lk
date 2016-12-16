@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:paddingLeft="@dimen/padding_left_4dp" android:paddingRight="@dimen/padding_right_4dp" android:paddingBottom="@dimen/padding_bottom_1dp" android:layout_width="fill_parent" android:layout_height="fill_parent"
+<FrameLayout android:id="@+id/lyt_search_adapter" android:paddingLeft="@dimen/padding_left_4dp" android:paddingRight="@dimen/padding_right_4dp" android:paddingBottom="@dimen/padding_bottom_1dp" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
     <LinearLayout android:gravity="center" android:orientation="horizontal" android:background="@color/bg_continue_watching_list" android:layout_width="fill_parent" android:layout_height="wrap_content">
         <RelativeLayout android:gravity="center" android:padding="@dimen/padding_4dp" android:layout_width="@dimen/width_150dp" android:layout_height="@dimen/height_90dp">
-            <ImageView android:id="@id/img_content" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@mipmap/ic_launcher" android:scaleType="centerCrop" />
+            <com.android.volley.toolbox.NetworkImageView android:id="@id/img_content" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@mipmap/ic_launcher" android:scaleType="centerCrop" />
             <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
                 <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/play_mini" />
             </FrameLayout>

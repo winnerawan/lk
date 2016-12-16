@@ -50,7 +50,11 @@
         <activity android:name=".activity.PrivacyPolicyActivity" />
         <activity android:name=".activity.MyProfileActivity" />
         <activity android:name=".activity.TermConditionActivity" />
-        <activity android:name=".activity.SessionMovieActivity" />
+        <!--Include the AdActivity configChanges and theme. -->
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:theme="@android:style/Theme.Translucent" />
 
         <!-- Firebase Notifications -->
         <service android:name=".service.MyFirebaseMessagingService">
@@ -64,7 +68,18 @@
             </intent-filter>
         </service>
         <!-- ./Firebase Notifications -->
-        <activity android:name=".activity.DetailMovieActivity"></activity>
+        <activity
+            android:name=".activity.DetailMovieActivity"
+            android:animateLayoutChanges="true" />
+        <activity
+            android:name=".activity.WatchMovieActivity"
+            android:configChanges="orientation|screenSize"
+            android:parentActivityName=".activity.DetailMovieActivity"
+            android:theme="@style/AppFull" />
+        <activity android:name=".activity.TVStreamActivity" />
+        <activity android:name=".activity.StreamActivity" />
+        <activity android:name=".activity.SerialMovieActivity" />
+        <activity android:name=".activity.AnimeListActivity"></activity>
     </application>
 
 </manifest>

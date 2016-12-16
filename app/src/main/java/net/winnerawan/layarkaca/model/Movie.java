@@ -57,6 +57,9 @@ public class Movie {
     @SerializedName("synopsis")
     @Expose
     private String synopsis;
+    @SerializedName("review")
+    @Expose
+    private String review;
     @SerializedName("post_date")
     @Expose
     private String postDate;
@@ -69,12 +72,18 @@ public class Movie {
     @SerializedName("link720")
     @Expose
     private String link720;
+    @SerializedName("hits")
+    @Expose
+    private Integer hits;
+    @SerializedName("viewType")
+    @Expose
+    private int viewType;
         public Movie() {
         }
 
         public Movie(Integer id, String title, String image, String poster, String trailer, String genre, String director, String quality,
-                     String release, String actor, String country, Double imdbRating, String duration, String synopsis,
-                     String postDate, String link360, String link480, String link720) {
+                     String release, String actor, String country, Double imdbRating, String duration, String synopsis, String review,
+                     String postDate, String link360, String link480, String link720, Integer hits) {
             this.id=id;
             this.title=title;
             this.image=image;
@@ -89,10 +98,12 @@ public class Movie {
             this.imdbRating=imdbRating;
             this.duration=duration;
             this.synopsis=synopsis;
+            this.review=review;
             this.postDate=postDate;
             this.link360=link360;
             this.link480=link480;
             this.link720=link720;
+            this.hits=hits;
     }
 
     public Integer getId() {
@@ -203,6 +214,14 @@ public class Movie {
         return synopsis;
     }
 
+    public String getReview() {
+        return review;
+    }
+
+    public void setReview(String review) {
+        this.review = review;
+    }
+
     public void setSynopsis(String synopsis) {
         this.synopsis = synopsis;
     }
@@ -237,5 +256,21 @@ public class Movie {
 
     public void setLink720(String link720) {
         this.link720 = link720;
+    }
+
+    public Integer getHits() {
+        return hits;
+    }
+
+    public void setHits(Integer hits) {
+        this.hits = hits;
+    }
+
+    public int getViewType() {
+        return viewType;
+    }
+
+    public void setViewType(int viewType) {
+        this.viewType = viewType;
     }
 }

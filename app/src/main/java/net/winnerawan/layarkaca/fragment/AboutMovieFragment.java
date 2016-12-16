@@ -46,7 +46,6 @@ import retrofit.client.Response;
 public class AboutMovieFragment extends Fragment {
 
     private static final String TAG = AboutMovieFragment.class.getSimpleName();
-    private Dialog pDialog;
     private Movie movie;
     private NetworkImageView imageView;
     private TextView txtTitle;
@@ -75,17 +74,9 @@ public class AboutMovieFragment extends Fragment {
     @Override
     public void onDestroy() {
         super.onDestroy();
-        hidePDialog();
     }
 
-    private void hidePDialog() {
-        if (pDialog != null) {
-            pDialog.dismiss();
-            pDialog = null;
-        }
-    }
-
-    public void getMovie(int id) {
+    private void getMovie(int id) {
         MyRequest request = new MyRequest();
         ApiService api = request.RequestMovie().create(ApiService.class);
         api.getMovie(id, new Callback<Movie>() {
@@ -93,7 +84,7 @@ public class AboutMovieFragment extends Fragment {
             public void success(Movie movie, Response response) {
                 pBar.setVisibility(View.GONE);
                 txtTitle.setText(movie.getTitle());
-                txtRating.setText(movie.getImdbRating().toString());
+                txtRating.setText(String.valueOf(movie.getImdbRating()));
                 txtSynopsis.setText("Synopsis");
                 txtDesc.setText(movie.getSynopsis());
                 String humanTime = movie.getRelease();

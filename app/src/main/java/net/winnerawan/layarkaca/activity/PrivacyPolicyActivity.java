@@ -107,7 +107,7 @@ public class PrivacyPolicyActivity extends AppCompatActivity {
     */
 
     private void setTxt_privacy_policy() {
-        JsonObjectRequest req = new JsonObjectRequest("http://api.layarkaca.wonderwall.biz.id/static/PRIVACYPOLICY.json", new JSONObject(),
+        JsonObjectRequest req = new JsonObjectRequest("http://api.layarkaca.wonderwall.biz.id/v1/static/PRIVACYPOLICY.json", new JSONObject(),
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {

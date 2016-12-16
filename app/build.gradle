@@ -12,6 +12,10 @@ repositories {
     maven { url 'https://maven.fabric.io/public' }
 }
 android {
+    lintOptions{
+        checkReleaseBuilds false
+        abortOnError false
+    }
     compileSdkVersion 23
     buildToolsVersion "23.0.1"
     defaultConfig {
@@ -60,8 +64,11 @@ dependencies {
     compile 'com.google.firebase:firebase-core:9.8.0'
     compile 'com.google.firebase:firebase-database:9.8.0'
     compile 'com.google.android.gms:play-services-auth:9.8.0'
+    compile 'com.google.firebase:firebase-ads:9.8.0'
     compile 'com.facebook.android:facebook-android-sdk:4.0.0'
     compile 'com.firebase:firebase-client-android:2.5.2'
+    compile 'com.linsea:universalvideoview:1.1.0@aar'
+    compile 'com.github.rtoshiro.fullscreenvideoview:fullscreenvideoview:1.1.2'
     compile files('libs/prettytime.jar')
     compile files('libs/YouTubeAndroidPlayerApi.jar')
     compile('com.twitter.sdk.android:twitter:2.2.0@aar') {

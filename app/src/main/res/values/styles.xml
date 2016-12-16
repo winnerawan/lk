@@ -197,6 +197,18 @@
             <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
             <item name="colorAccent">@color/colorAccent</item>
         </style>
+    <style name="AppFull" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:paddingLeft">0.0dip</item>
+        <item name="contentInsetStart">0.0dip</item>
+        <item name="contentInsetEnd">0.0dip</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
         <style name="Base.TextAppearance.AppCompat" parent="@android:style/TextAppearance">
             <item name="android:textSize">@dimen/abc_text_size_body_1_material</item>
             <item name="android:textColor">?android:textColorPrimary</item>
