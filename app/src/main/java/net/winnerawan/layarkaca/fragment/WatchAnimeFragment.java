@@ -64,11 +64,11 @@ public class WatchAnimeFragment extends Fragment {
         getEpisode(id);
         return view;
     }
-    //TODO --> change to get episode fragment
+
     private void getEpisode(int id) {
         MyRequest req = new MyRequest();
         ApiService api = req.RequestMovie().create(ApiService.class);
-        api.getFullSerial(id, new Callback<EpisodeResponse>() {
+        api.getFullAnime(id, new Callback<EpisodeResponse>() {
             @Override
             public void success(EpisodeResponse episodeResponse, Response response) {
                 pBar.setVisibility(View.GONE);

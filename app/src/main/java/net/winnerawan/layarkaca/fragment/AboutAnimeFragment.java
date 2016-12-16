@@ -58,7 +58,7 @@ public class AboutAnimeFragment extends Fragment {
         initLayout(view);
         Bundle bundle = getActivity().getIntent().getExtras();
         int id = bundle.getInt("id");
-        getSerial(id);
+        getAnime(id);
         Log.e(TAG, "anime : "+id);
         return view;
     }
@@ -68,11 +68,10 @@ public class AboutAnimeFragment extends Fragment {
         super.onDestroy();
     }
 
-    //TODO --> change to get anime by id
-    private void getSerial(int id) {
+    private void getAnime(int id) {
         MyRequest req = new MyRequest();
         ApiService api = req.RequestMovie().create(ApiService.class);
-        api.getSerial(id, new Callback<Serial>() {
+        api.getAnime(id, new Callback<Serial>() {
             @Override
             public void success(Serial serial, Response response) {
                 pBar.setVisibility(View.GONE);

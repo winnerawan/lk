@@ -61,15 +61,14 @@ public class AnimeFragment extends Fragment implements SwipeRefreshLayout.OnRefr
         pBar = (ProgressBar) view.findViewById(R.id.loading);
         pBar.setVisibility(View.GONE);
         swipeLayout.setOnRefreshListener(this);
-        getListSerialMovies();
+        getListAnime();
 
         return view;
     }
-    //TODO --> change to get list anime
-    private void getListSerialMovies() {
+    private void getListAnime() {
         MyRequest request = new MyRequest();
         ApiService api = request.RequestMovie().create(ApiService.class);
-        api.getSerialMovies(new Callback<SerialResponse>() {
+        api.getListAnime(new Callback<SerialResponse>() {
             @Override
             public void success(SerialResponse serialResponse, Response response) {
                 pBar.setVisibility(View.GONE);
@@ -104,6 +103,6 @@ public class AnimeFragment extends Fragment implements SwipeRefreshLayout.OnRefr
     @Override
     public void onRefresh() {
         pBar.setVisibility(View.VISIBLE);
-        getListSerialMovies();
+        getListAnime();
     }
 }

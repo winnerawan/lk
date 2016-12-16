@@ -16,11 +16,13 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 
 import net.winnerawan.layarkaca.R;
 import net.winnerawan.layarkaca.activity.DetailMovieActivity;
 import net.winnerawan.layarkaca.adapter.MovieAdapter;
+import net.winnerawan.layarkaca.adapter.RV_Adapter;
 import net.winnerawan.layarkaca.helper.ItemClickSupport;
 import net.winnerawan.layarkaca.helper.MyRequest;
 import net.winnerawan.layarkaca.model.Movie;
@@ -45,7 +47,7 @@ public class PopularMovieFragment extends Fragment implements SwipeRefreshLayout
     private List<Movie> movies;
     private RecyclerView recyclerView;
     private SwipeRefreshLayout swipeLayout;
-    private MovieAdapter adapter;
+    private RV_Adapter adapter;
 
     public PopularMovieFragment() {
 
@@ -60,7 +62,7 @@ public class PopularMovieFragment extends Fragment implements SwipeRefreshLayout
         swipeLayout.setColorSchemeResources(R.color.material_green);
         swipeLayout.setOnRefreshListener(this);
         getPopularMovies();
-        adapter = new MovieAdapter(movies, R.layout.adapter_home_conten, getActivity().getApplicationContext());
+        //adapter = new MovieAdapter(movies, R.layout.adapter_home_conten, getActivity().getApplicationContext());
         return view;
     }
 
@@ -89,10 +91,27 @@ public class PopularMovieFragment extends Fragment implements SwipeRefreshLayout
                 boolean error = movieResponse.getError();
                 if (!error) {
                     movies = movieResponse.getMovies();
-                    adapter = new MovieAdapter(movies, R.layout.adapter_home_conten, getActivity().getApplicationContext());
+                    //adapter = new MovieAdapter(movies, R.layout.adapter_home_conten, getActivity().getApplicationContext());
                     //adapter.notifyDataSetChanged();
+                    int listSize =movies.size();
+                    int ITEM = 0;
+                    int NATIVE_AD = 1;
+                    int[] viewTypes = new int[listSize];
+                    for (int i = 0; i < listSize; i++) {
+                        //movies.add(new Movie());
+                        //insert native ads once in five items
+                        if (i > 1 && i % 3 == 0) {
+                            viewTypes[i] = NATIVE_AD;
+                        } else {
+                            viewTypes[i] = ITEM;
+                        }
+                    }
+                    LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+                    recyclerView.setLayoutParams(params);
+                    adapter = new RV_Adapter(movies, viewTypes);
                     recyclerView.setAdapter(adapter);
-                    adapter.notifyDataSetChanged();
+                    recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+                    //adapter.notifyDataSetChanged();
                     //recyclerView.setAdapter(adapter(movies, R.layout.adapter_home_conten, getActivity().getApplicationContext()));
                 }
             }

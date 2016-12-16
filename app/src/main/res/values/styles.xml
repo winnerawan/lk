@@ -1,6 +1,25 @@
 <resources>
+    <style name="MyPopupMenu" parent="android:style/Widget.Holo.Light.ListPopupWindow">
+        <item name="android:popupBackground">#1e1e1e</item>
+        <item name="android:selectableItemBackground">@color/selectablecolor</item>
+    </style>
 
-        <style name="Base.Widget.AppCompat.DrawerArrowToggle" parent="@style/Base.Widget.AppCompat.DrawerArrowToggle.Common">
+    <style name="AndroidSRC.TextAppearance" parent="@android:style/Widget.Holo.Light.TextView">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="AppPlayer" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:popupMenuStyle">@style/MyPopupMenu</item>
+        <item name="android:itemTextAppearance">@style/AndroidSRC.TextAppearance</item>
+        <item name="android:actionMenuTextColor">@color/white_light</item>
+        <item name="android:colorBackground">@color/background_holo_light</item>
+    </style>
+
+    <style name="Base.Widget.AppCompat.DrawerArrowToggle" parent="@style/Base.Widget.AppCompat.DrawerArrowToggle.Common">
             <item name="drawableSize">24.0dip</item>
             <item name="gapBetweenBars">3.0dip</item>
             <item name="barLength">18.0dip</item>

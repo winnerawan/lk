@@ -61,7 +61,9 @@ public class SearchActivity extends AppCompatActivity implements SearchView.OnQu
         });
         recycleSearch.setLayoutManager(new LinearLayoutManager(this));
         getAllMovies();
-        adapter = new SearchAdapter(movies, R.layout.adapter_search, getApplicationContext());
+        //adapter = new SearchAdapter(movies, R.layout.adapter_search, getApplicationContext());
+
+
         txt_seacrh.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -140,7 +142,8 @@ public class SearchActivity extends AppCompatActivity implements SearchView.OnQu
         ItemClickSupport.addTo(recycleSearch).setOnItemClickListener(new ItemClickSupport.OnItemClickListener() {
             @Override
             public void onItemClicked(RecyclerView recyclerView, int position, View v) {
-                final Movie mov = (Movie) adapter.getItem(position);
+                adapter = new SearchAdapter(movies, R.layout.adapter_search, getApplicationContext());
+                Movie mov = (Movie) adapter.getItem(position);
                 Intent i = new Intent(SearchActivity.this, DetailMovieActivity.class);
                 i.putExtra("id",mov.getId());
                 i.putExtra("title", mov.getTitle());

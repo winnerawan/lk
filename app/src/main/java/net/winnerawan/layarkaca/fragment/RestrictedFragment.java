@@ -27,9 +27,11 @@ import com.android.volley.toolbox.JsonArrayRequest;
 
 import net.winnerawan.layarkaca.R;
 import net.winnerawan.layarkaca.activity.DetailMovieActivity;
+import net.winnerawan.layarkaca.activity.SemiMovieDetailActivity;
 import net.winnerawan.layarkaca.adapter.ListMovieAdapter;
 import net.winnerawan.layarkaca.adapter.ListRestrictedAdapter;
 import net.winnerawan.layarkaca.adapter.MovieAdapter;
+import net.winnerawan.layarkaca.adapter.RV_Adapter;
 import net.winnerawan.layarkaca.app.AppConfig;
 import net.winnerawan.layarkaca.app.AppController;
 import net.winnerawan.layarkaca.helper.ItemClickSupport;
@@ -46,6 +48,8 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
@@ -68,6 +72,7 @@ public class RestrictedFragment extends Fragment implements SwipeRefreshLayout.O
     private RecyclerView recyclerView;
     private SwipeRefreshLayout swipeLayout;
     private ProgressBar pBar;
+    RV_Adapter adapter;
 
     public RestrictedFragment() {
     }
@@ -93,15 +98,32 @@ public class RestrictedFragment extends Fragment implements SwipeRefreshLayout.O
     private void getRestrictedContent() {
         MyRequest request = new MyRequest();
         ApiService api = request.RequestMovie().create(ApiService.class);
-        api.getNewMovies(new Callback<MovieResponse>() {
+        api.getSemiMovies(new Callback<MovieResponse>() {
             @Override
             public void success(MovieResponse movieResponse, retrofit.client.Response response) {
                 pBar.setVisibility(View.GONE);
                 boolean error = movieResponse.getError();
                 if (!error) {
                     movies = movieResponse.getMovies();
-                    recyclerView.setAdapter(new MovieAdapter(movies, R.layout.adapter_home_conten, getActivity().getApplicationContext()));
-
+                    //recyclerView.setAdapter(new MovieAdapter(movies, R.layout.adapter_home_conten, getActivity().getApplicationContext()));
+                    int listSize =movies.size();
+                    int ITEM = 0;
+                    int NATIVE_AD = 1;
+                    int[] viewTypes = new int[listSize];
+                    for (int i = 0; i < listSize; i++) {
+                        //movies.add(new Movie());
+                        //insert native ads once in five items
+                        if (i > 1 && i % 3 == 0) {
+                            viewTypes[i] = NATIVE_AD;
+                        } else {
+                            viewTypes[i] = ITEM;
+                        }
+                    }
+                    LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+                    recyclerView.setLayoutParams(params);
+                    adapter = new RV_Adapter(movies, viewTypes);
+                    recyclerView.setAdapter(adapter);
+                    recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
                 }
             }
 
@@ -114,7 +136,7 @@ public class RestrictedFragment extends Fragment implements SwipeRefreshLayout.O
         ItemClickSupport.addTo(recyclerView).setOnItemClickListener(new ItemClickSupport.OnItemClickListener() {
             @Override
             public void onItemClicked(RecyclerView recyclerView, int position, View v) {
-                Intent i = new Intent(getActivity().getApplicationContext(), DetailMovieActivity.class);
+                Intent i = new Intent(getActivity().getApplicationContext(), SemiMovieDetailActivity.class);
                 i.putExtra("id", movies.get(position).getId());
                 i.putExtra("title", movies.get(position).getTitle());
                 i.putExtra("image", movies.get(position).getImage());
@@ -134,7 +156,7 @@ public class RestrictedFragment extends Fragment implements SwipeRefreshLayout.O
     private void NOTAUTHORIZED() {
         MyRequest request = new MyRequest();
         ApiService api = request.RequestMovie().create(ApiService.class);
-        api.getNewMovies(new Callback<MovieResponse>() {
+        api.getSemiMovies(new Callback<MovieResponse>() {
             @Override
             public void success(MovieResponse movieResponse, retrofit.client.Response response) {
                 pBar.setVisibility(View.GONE);

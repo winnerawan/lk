@@ -28,8 +28,6 @@ public interface ApiService {
     @GET("/v1/newMovies")
     void getNewMovies(Callback<MovieResponse> mr);
 
-    @GET("/v1/newMovies")
-    void getNewMoviesArray(Callback<MovieArrayResponse> mr);
 
     @GET("/v1/allMovies")
     void getAllMovies(Callback<MovieResponse> mr);
@@ -43,6 +41,9 @@ public interface ApiService {
     @GET("/v1/semiMovies")
     void getSemiMovies(Callback<MovieResponse> mr);
 
+    @GET("/v1/semimovie/{id}")
+    void getSemiMovie(@Path("id") int id, Callback<Movie> m);
+
     @GET("/v1/serialMovies")
     void getSerialMovies(Callback<SerialResponse> sr);
 
@@ -52,8 +53,17 @@ public interface ApiService {
     @GET("/v1/fullSerial/{id}")
     void getFullSerial(@Path("id") int id, Callback<EpisodeResponse> er);
 
+    //TODO add to api
     @GET("/v1/listAnime")
     void getListAnime(Callback<SerialResponse> sr);
+
+    //TODO add to api
+    @GET("/v1/serial/{id}")
+    void getAnime(@Path("id") int id, Callback<Serial> sr);
+
+    //TODO add to api
+    @GET("/v1/fullAnime/{id}")
+    void getFullAnime(@Path("id") int id, Callback<EpisodeResponse> er);
 
     @GET("/v1/liveStream")
     void getListTV(Callback<TVResponse> tr);

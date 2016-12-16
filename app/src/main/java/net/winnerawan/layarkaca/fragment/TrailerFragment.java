@@ -98,7 +98,7 @@ public class TrailerFragment extends Fragment {
             public void success(final Movie movie, Response response) {
                 pBar.setVisibility(View.GONE);
                 txtTitle.setText(movie.getTitle());
-                txtRating.setText(movie.getImdbRating().toString());
+                txtRating.setText(String.valueOf(movie.getImdbRating()));
                 imageView.setImageUrl(movie.getImage(), imageLoader);
 
                 youTubeView.initialize(AppConfig.YOUTUBE_API_KEY, new YouTubePlayer.OnInitializedListener() {
@@ -115,7 +115,7 @@ public class TrailerFragment extends Fragment {
 
                     }
                 });
-                Log.e(TAG, movie.getTitle());
+                Log.e(TAG, "error"+movie.getTitle());
             }
 
             @Override

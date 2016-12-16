@@ -49,9 +49,6 @@
         <enum name="wrap_content" value="-2" />
         <enum name="match_parent" value="-1" />
     </attr>
-    <attr name="imageButtonStyle" format="reference" />
-    <attr name="seekBarStyle" format="reference" />
-    <attr name="allowStacking" format="boolean" />
 
 
     <attr name="buyButtonText">
@@ -63,6 +60,5 @@
         <enum name="donate_with_google" value="4" />
         <enum name="logo_only" value="6" />
     </attr>
-    <attr name="externalRouteEnabledDrawable" format="reference" />
 
 </resources>

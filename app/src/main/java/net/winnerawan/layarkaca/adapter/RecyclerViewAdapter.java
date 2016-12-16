@@ -129,7 +129,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
         switch (viewType) {
             case MENU_ITEM_VIEW_TYPE:
                 MenuItemViewHolder menuItemHolder = (MenuItemViewHolder) holder;
-                
+
                 Movie menuItem = (Movie) mRecyclerViewItems.get(position);
 
                 menuItemHolder.imageView.setImageUrl(menuItem.getImage(), imageLoader);

@@ -28,9 +28,13 @@ import android.widget.VideoView;
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.NetworkImageView;
 import com.astuetz.PagerSlidingTabStrip;
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
 
 import net.winnerawan.layarkaca.R;
 import net.winnerawan.layarkaca.activity.DetailMovieActivity;
+import net.winnerawan.layarkaca.activity.VideoPlayer;
 import net.winnerawan.layarkaca.activity.WatchMovieActivity;
 import net.winnerawan.layarkaca.app.AppController;
 import net.winnerawan.layarkaca.helper.MyRequest;
@@ -68,7 +72,6 @@ public class WatchMovieFragment extends Fragment {
 
 
 
-
     public WatchMovieFragment() {
 
     }
@@ -79,12 +82,15 @@ public class WatchMovieFragment extends Fragment {
         initLayout(view);
         Bundle bundle = getActivity().getIntent().getExtras();
         final int id = bundle.getInt("id");
+        // set the ad unit ID
+
+
         getMovie(id);
 
         rytPlay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getActivity().getApplicationContext(), WatchMovieActivity.class);
+                Intent i = new Intent(getActivity().getApplicationContext(), VideoPlayer.class);
                 i.putExtra("movie_id", id);
                 startActivity(i);
             }

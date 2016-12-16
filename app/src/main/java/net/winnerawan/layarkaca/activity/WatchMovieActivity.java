@@ -26,6 +26,9 @@ import android.widget.TextView;
 import android.widget.VideoView;
 
 import com.github.rtoshiro.view.video.FullscreenVideoLayout;
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
 import com.universalvideoview.UniversalMediaController;
 import com.universalvideoview.UniversalVideoView;
 
@@ -56,15 +59,33 @@ public class WatchMovieActivity extends AppCompatActivity {
     View mVideoLayout;
     private static final String SEEK_POSITION_KEY = "SEEK_POSITION_KEY";
 
+    InterstitialAd mInterstitialAd;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId(getString(R.string.ad_unit_interstitial));
+
+        AdRequest adRequest = new AdRequest.Builder()
+                .build();
+
+        // Load ads into Interstitial Ads
+        mInterstitialAd.loadAd(adRequest);
+
+        mInterstitialAd.setAdListener(new AdListener() {
+            public void onAdLoaded() {
+                showInterstitial();
+            }
+        });
         //requestWindowFeature(Window.FEATURE_NO_TITLE);
         //getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
         //        WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         setContentView(R.layout.activity_watch_movie);
-        mVideoLayout = findViewById(R.id.movie_layout);
+        mVideoLayout = findViewById(R.id.activity_watch_movie);
         videoView = (FullscreenVideoLayout) findViewById(R.id.movie_view);
         //mediaController = (UniversalMediaController) findViewById(R.id.media_controller);
         txtBufer = (TextView) findViewById(R.id.txt_session);
@@ -79,6 +100,12 @@ public class WatchMovieActivity extends AppCompatActivity {
         getMovie(movie);
         Log.e("TAG", "watch ---> "+movie);
 
+    }
+
+    private void showInterstitial() {
+        if (mInterstitialAd.isLoaded()) {
+            mInterstitialAd.show();
+        }
     }
 
 
@@ -126,15 +153,12 @@ public class WatchMovieActivity extends AppCompatActivity {
                 videoView.setOnTouchListener(new View.OnTouchListener() {
                     @Override
                     public boolean onTouch(View view, MotionEvent motionEvent) {
-                        txtBufer.setText("Playing...");
-                        rytBuff.setVisibility(View.VISIBLE);
-                        rytBuff.setOnTouchListener(new View.OnTouchListener() {
-                            @Override
-                            public boolean onTouch(View view, MotionEvent motionEvent) {
-                                rytBuff.setVisibility(View.GONE);
-                                return false;
-                            }
-                        });
+                        if (rytBuff.getVisibility()==View.GONE) {
+                            txtBufer.setText("Playing...");
+                            rytBuff.setVisibility(View.VISIBLE);
+                        } else {
+                            rytBuff.setVisibility(View.GONE);
+                        }
                         return false;
                     }
                 });

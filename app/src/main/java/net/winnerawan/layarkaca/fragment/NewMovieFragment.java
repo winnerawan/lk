@@ -69,7 +69,7 @@ public class NewMovieFragment extends Fragment implements SwipeRefreshLayout.OnR
     SwipeRefreshLayout swipeLayout;
     RV_Adapter adopter;
     public static final int ITEMS_PER_AD = 8;
-    private ArrayList<Object> mRecyclerViewItems = new ArrayList<>() ;
+    private List<Object> mRecyclerViewItems = new ArrayList<>() ;
 
     private static final int NATIVE_EXPRESS_AD_HEIGHT = 200;
 
@@ -156,15 +156,15 @@ public class NewMovieFragment extends Fragment implements SwipeRefreshLayout.OnR
                 boolean error = movieResponse.getError();
                 if (!error) {
                     movies = movieResponse.getMovies();
-                    /*
-                    int listSize =50;
+
+                    int listSize =movies.size()+2;
                     int ITEM = 0;
                     int NATIVE_AD = 1;
                     int[] viewTypes = new int[listSize];
                     for (int i = 0; i < listSize; i++) {
-                        movies.add(new Movie());
+                        //movies.add(new Movie());
                         //insert native ads once in five items
-                        if (i > 1 && i % 5 == 0) {
+                        if (i > 1 && i % 3 == 0) {
                             viewTypes[i] = NATIVE_AD;
                         } else {
                             viewTypes[i] = ITEM;
@@ -176,16 +176,18 @@ public class NewMovieFragment extends Fragment implements SwipeRefreshLayout.OnR
                     recyclerView.setLayoutParams(params);
                     adopter = new RV_Adapter(movies, viewTypes);
                     recyclerView.setAdapter(adopter);
-                    adopter.notifyDataSetChanged();
-                    */
+                    recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+                    //adopter.notifyDataSetChanged();
+
                     /*
-                    mRecyclerViewItems.add(movies);
+                    mRecyclerViewItems.addAll(movies);
                     addNativeExpressAds();
                     setUpAndLoadNativeExpressAds();
                     RecyclerViewAdapter adapter = new RecyclerViewAdapter(getActivity(), mRecyclerViewItems);
                     recyclerView.setAdapter(adapter);
                     */
-                    recyclerView.setAdapter(new MovieAdapter(movies, R.layout.adapter_home_conten, getActivity().getApplicationContext()));
+                    //recyclerView.setAdapter(new MovieAdapter(movies, R.layout.adapter_home_conten, getActivity().getApplicationContext()));
+
                 }
             }
 
