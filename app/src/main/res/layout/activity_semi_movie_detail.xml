@@ -14,6 +14,6 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="net.winnerawan.layarkaca.activity.SemiMovieDetailActivity">
+    tools:context="net.winnerawan.wonderscreen.activity.SemiMovieDetailActivity">
 
 </RelativeLayout>

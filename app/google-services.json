@@ -1,27 +1,27 @@
 {
   "project_info": {
-    "project_number": "451165188555",
-    "firebase_url": "https://layar-kaca.firebaseio.com",
-    "project_id": "layar-kaca",
-    "storage_bucket": "layar-kaca.appspot.com"
+    "project_number": "345395886963",
+    "firebase_url": "https://next-screen.firebaseio.com",
+    "project_id": "next-screen",
+    "storage_bucket": "next-screen.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:451165188555:android:c6a779d8db0a6ac9",
+        "mobilesdk_app_id": "1:345395886963:android:f34f371b517edd6e",
         "android_client_info": {
-          "package_name": "id.biz.wonderwall.layarkaca"
+          "package_name": "net.winnerawan.nextscreen"
         }
       },
       "oauth_client": [
         {
-          "client_id": "451165188555-jaslihp8j9gf29ccqpav2dhh7af4e5qo.apps.googleusercontent.com",
+          "client_id": "345395886963-ea2iffuroad4cr0hii6rsh67nptm3i1b.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDP23qGTp6bKKRlY_Q52PY9oEHXEU7wTns"
+          "current_key": "AIzaSyCjOXovE0RL7e4w8q5FDawNX_v4qdZDGcc"
         }
       ],
       "services": {
@@ -29,13 +29,8 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 2,
-          "other_platform_oauth_client": [
-            {
-              "client_id": "451165188555-jaslihp8j9gf29ccqpav2dhh7af4e5qo.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "status": 1,
+          "other_platform_oauth_client": []
         },
         "ads_service": {
           "status": 2
@@ -44,20 +39,20 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:451165188555:android:d8df944d9c72510f",
+        "mobilesdk_app_id": "1:345395886963:android:49885ab47200819d",
         "android_client_info": {
-          "package_name": "net.winnerawan.layarkaca"
+          "package_name": "net.winnerawan.wonderscreen"
         }
       },
       "oauth_client": [
         {
-          "client_id": "451165188555-jaslihp8j9gf29ccqpav2dhh7af4e5qo.apps.googleusercontent.com",
+          "client_id": "345395886963-ea2iffuroad4cr0hii6rsh67nptm3i1b.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDP23qGTp6bKKRlY_Q52PY9oEHXEU7wTns"
+          "current_key": "AIzaSyCjOXovE0RL7e4w8q5FDawNX_v4qdZDGcc"
         }
       ],
       "services": {
@@ -65,13 +60,8 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 2,
-          "other_platform_oauth_client": [
-            {
-              "client_id": "451165188555-jaslihp8j9gf29ccqpav2dhh7af4e5qo.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "status": 1,
+          "other_platform_oauth_client": []
         },
         "ads_service": {
           "status": 2

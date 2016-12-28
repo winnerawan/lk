@@ -127,7 +127,7 @@
         <ImageView
             android:layout_width="@dimen/width_261dp"
             android:layout_height="match_parent"
-            android:src="@mipmap/logo" />
+            android:src="@mipmap/ws_logo" />
     </LinearLayout>
 
 

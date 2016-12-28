@@ -49,7 +49,17 @@
         <enum name="wrap_content" value="-2" />
         <enum name="match_parent" value="-1" />
     </attr>
+    <attr name="imageButtonStyle" format="reference" />
+    <attr name="seekBarStyle" format="reference" />
+    <attr name="allowStacking" format="boolean" />
 
+    <attr name="externalRouteEnabledDrawable" format="reference" />
+    <attr name="cardBackgroundColor" format="color" />
+    <attr name="cardCornerRadius" format="dimension" />
+    <attr name="cardElevation" format="dimension" />
+    <attr name="cardMaxElevation" format="dimension" />
+    <attr name="cardUseCompatPadding" format="boolean" />
+    <attr name="cardPreventCornerOverlap" format="boolean" />
 
     <attr name="buyButtonText">
         <enum name="book_now" value="3" />
