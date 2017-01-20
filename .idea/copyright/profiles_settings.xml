@@ -1,7 +1,3 @@
 <component name="CopyrightManager">
-  <settings default="winnerawan">
-    <module2copyright>
-      <element module="All" copyright="winnerawan" />
-    </module2copyright>
-  </settings>
+  <settings default="" />
 </component>

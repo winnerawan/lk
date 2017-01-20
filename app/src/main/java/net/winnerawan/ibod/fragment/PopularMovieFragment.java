@@ -1,0 +1,199 @@
+/*
+ * Copyright (c) 2016. Wonderwall.biz.id | Winnerawan.net .
+ * Coder @author Winnerawan T
+ *
+ */
+
+package net.winnerawan.ibod.fragment;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
+import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.ProgressBar;
+
+import net.winnerawan.ibod.R;
+import net.winnerawan.ibod.activity.DetailMovieActivity;
+import net.winnerawan.ibod.adapter.RV_Adapter;
+import net.winnerawan.ibod.helper.ItemClickSupport;
+import net.winnerawan.ibod.helper.MyRequest;
+import net.winnerawan.ibod.helper.ServerOneRequest;
+import net.winnerawan.ibod.model.Content;
+import net.winnerawan.ibod.model.Movie;
+import net.winnerawan.ibod.model.Video;
+import net.winnerawan.ibod.response.MovieResponse;
+import net.winnerawan.ibod.response.ServerOneResponse;
+import net.winnerawan.ibod.service.ApiServerOne;
+import net.winnerawan.ibod.service.ApiService;
+
+import java.util.List;
+
+import retrofit.Callback;
+import retrofit.RetrofitError;
+import retrofit.client.Response;
+
+/**
+ * Created by winnerawan on 12/12/16.
+ */
+
+public class PopularMovieFragment extends Fragment implements SwipeRefreshLayout.OnRefreshListener{
+
+    private static final String TAG = PopularMovieFragment.class.getSimpleName();
+
+    private ProgressBar pBar;
+    private List<Movie> movies;
+    private RecyclerView recyclerView;
+    private SwipeRefreshLayout swipeLayout;
+    private RV_Adapter adapter;
+    private List<Content> contents;
+    private List<Video> videos;
+
+    public PopularMovieFragment() {
+
+    }
+
+
+    @Nullable
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
+        initLayout(view);
+        swipeLayout.setColorSchemeResources(R.color.material_green);
+        swipeLayout.setOnRefreshListener(this);
+        //getPopularMovies();
+        //adapter = new MovieAdapter(movies, R.layout.adapter_home_conten, getActivity().getApplicationContext());
+        movieFromServerOne(1);
+
+        swipeLayout.post(new Runnable() {
+                             @Override
+                             public void run() {
+                                 swipeLayout.setRefreshing(true);
+                                 for (int i=1; i<2; i++) {
+                                     movieFromServerOne(i);
+                                    Log.e(TAG, "post refresh : "+i +"__"+i++);
+                                 }
+                             }
+                         }
+        );
+        return view;
+    }
+
+    private void initLayout(View view) {
+        this.recyclerView = (RecyclerView) view.findViewById(R.id.recyclerview_home);
+        this.swipeLayout = (SwipeRefreshLayout) view.findViewById(R.id.swipe);
+        this.pBar = (ProgressBar) view.findViewById(R.id.loading);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this.getActivity());
+        this.recyclerView.setLayoutManager(layoutManager);
+    }
+
+    @Override
+    public void onRefresh() {
+        pBar.setVisibility(View.VISIBLE);
+        int i= 2;
+        movieFromServerOne(i);
+        i = i+1;
+    }
+
+    private void getPopularMovies() {
+        MyRequest request = new MyRequest();
+        ApiService api = request.RequestMovie().create(ApiService.class);
+        api.getPopularMovies(new Callback<MovieResponse>() {
+            @Override
+            public void success(MovieResponse movieResponse, Response response) {
+                pBar.setVisibility(View.GONE);
+                swipeLayout.setRefreshing(false);
+                boolean error = movieResponse.getError();
+                if (!error) {
+                    movies = movieResponse.getMovies();
+                    //adapter = new MovieAdapter(movies, R.layout.adapter_home_conten, getActivity().getApplicationContext());
+                    //adapter.notifyDataSetChanged();
+                    /*
+                    int listSize =movies.size();
+                    int ITEM = 0;
+                    int NATIVE_AD = 1;
+                    int[] viewTypes = new int[listSize];
+                    for (int i = 0; i < listSize; i++) {
+                        //movies.add(new Movie());
+                        //insert native ads once in five items
+                        if (i > 1 && i % 3 == 0) {
+                            viewTypes[i] = NATIVE_AD;
+                        } else {
+                            viewTypes[i] = ITEM;
+                        }
+                    }
+                    LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+                    recyclerView.setLayoutParams(params);
+                    adapter = new RV_Adapter(movies, viewTypes);
+                    recyclerView.setAdapter(adapter);
+                    recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+                    //adapter.notifyDataSetChanged();
+                    //recyclerView.setAdapter(adapter(movies, R.layout.adapter_home_conten, getActivity().getApplicationContext()));
+                */
+                }
+
+            }
+
+            @Override
+            public void failure(RetrofitError error) {
+
+            }
+        });
+
+        ItemClickSupport.addTo(recyclerView).setOnItemClickListener(new ItemClickSupport.OnItemClickListener() {
+            @Override
+            public void onItemClicked(RecyclerView recyclerView, int position, View v) {
+                Intent i = new Intent(getActivity().getApplicationContext(), DetailMovieActivity.class);
+                i.putExtra("id", movies.get(position).getId());
+                i.putExtra("title", movies.get(position).getTitle());
+                i.putExtra("image", movies.get(position).getImage());
+                startActivity(i);
+            }
+        });
+    }
+
+    private void movieFromServerOne(int p) {
+        ServerOneRequest req = new ServerOneRequest();
+        ApiServerOne api = req.RequestMovieFromServerOne().create(ApiServerOne.class);
+        api.getMostMovies(p, new Callback<ServerOneResponse>() {
+            @Override
+            public void success(ServerOneResponse serverOneResponse, Response response) {
+                pBar.setVisibility(View.GONE);
+                swipeLayout.setRefreshing(false);
+                Log.e(TAG, "Message: "+serverOneResponse.getMessage()+" - Content : "+serverOneResponse.getContent().getVideos().get(1).getTitle()
+                +"size :"+serverOneResponse.getContent().getVideos().size());
+                videos = serverOneResponse.getContent().getVideos();
+                int listSize =serverOneResponse.getContent().getVideos().size();
+                int ITEM = 0;
+                int NATIVE_AD = 1;
+                int[] viewTypes = new int[listSize];
+                for (int i = 0; i < listSize; i++) {
+                    //movies.add(new Movie());
+                    //insert native ads once in five items
+                    if (i > 1 && i % 3 == 0) {
+                        viewTypes[i] = NATIVE_AD;
+                    } else {
+                        viewTypes[i] = ITEM;
+                    }
+                }
+                LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+                recyclerView.setLayoutParams(params);
+                adapter = new RV_Adapter(videos, viewTypes);
+                recyclerView.setAdapter(adapter);
+                recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+            }
+
+            @Override
+            public void failure(RetrofitError error) {
+                Log.e(TAG, "Error : "+error.getMessage()+ "url : "+error.getUrl());
+            }
+        });
+    }
+}

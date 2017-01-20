@@ -19,7 +19,7 @@ android {
     compileSdkVersion 23
     buildToolsVersion "25.0.1"
     defaultConfig {
-        applicationId "net.winnerawan.wonderscreen"
+        applicationId "net.winnerawan.ibod"
         minSdkVersion 17
         targetSdkVersion 23
         versionCode 1

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="net.winnerawan.wonderscreen">
+    package="net.winnerawan.ibod">
 
     <uses-feature
         android:glEsVersion="0x20000"
@@ -21,7 +21,7 @@
         android:required="true" />
 
     <application
-        android:name=".app.AppController"
+        android:name="net.winnerawan.ibod.app.AppController"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -38,26 +38,26 @@
             android:name="io.fabric.ApiKey"
             android:value="d42e4b4bf775aaae9d8ac1309f58f8158e83a599" />
 
-        <activity android:name=".activity.SplashActivity">
+        <activity android:name="net.winnerawan.ibod.activity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.LoginActivity" />
-        <activity android:name=".activity.HomeActivity" />
-        <activity android:name=".activity.SearchActivity" />
+        <activity android:name="net.winnerawan.ibod.activity.LoginActivity" />
+        <activity android:name="net.winnerawan.ibod.activity.HomeActivity" />
+        <activity android:name="net.winnerawan.ibod.activity.SearchActivity" />
         <!-- Add this -->
         <activity
             android:name="com.facebook.FacebookActivity"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
             android:label="@string/app_name"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-        <activity android:name=".activity.MoreActivity" />
-        <activity android:name=".activity.PrivacyPolicyActivity" />
-        <activity android:name=".activity.MyProfileActivity" />
-        <activity android:name=".activity.TermConditionActivity" />
+        <activity android:name="net.winnerawan.ibod.activity.MoreActivity" />
+        <activity android:name="net.winnerawan.ibod.activity.PrivacyPolicyActivity" />
+        <activity android:name="net.winnerawan.ibod.activity.MyProfileActivity" />
+        <activity android:name="net.winnerawan.ibod.activity.TermConditionActivity" />
         <!-- Include the AdActivity configChanges and theme. -->
         <activity
             android:name="com.google.android.gms.ads.AdActivity"
@@ -65,38 +65,38 @@
             android:theme="@android:style/Theme.Translucent" />
 
         <!-- Firebase Notifications -->
-        <service android:name=".service.MyFirebaseMessagingService">
+        <service android:name="net.winnerawan.ibod.service.MyFirebaseMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-        <service android:name=".service.MyFirebaseInstanceIDService">
+        <service android:name="net.winnerawan.ibod.service.MyFirebaseInstanceIDService">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
         <!-- ./Firebase Notifications -->
         <activity
-            android:name=".activity.DetailMovieActivity"
+            android:name="net.winnerawan.ibod.activity.DetailMovieActivity"
             android:animateLayoutChanges="true" />
         <activity
-            android:name=".activity.WatchMovieActivity"
+            android:name="net.winnerawan.ibod.activity.WatchMovieActivity"
             android:configChanges="orientation|screenSize"
-            android:parentActivityName=".activity.DetailMovieActivity"
+            android:parentActivityName="net.winnerawan.ibod.activity.DetailMovieActivity"
             android:theme="@style/AppFull" />
         <activity
-            android:name=".activity.WatchSemiMovieActivity"
+            android:name="net.winnerawan.ibod.activity.WatchSemiMovieActivity"
             android:configChanges="orientation|screenSize"
-            android:parentActivityName=".activity.DetailMovieActivity"
+            android:parentActivityName="net.winnerawan.ibod.activity.DetailMovieActivity"
             android:theme="@style/AppFull" />
-        <activity android:name=".activity.TVStreamActivity" />
-        <activity android:name=".activity.StreamActivity" />
-        <activity android:name=".activity.SerialMovieActivity" />
-        <activity android:name=".activity.AnimeListActivity" />
-        <activity android:name=".activity.SemiMovieDetailActivity" />
-        <activity android:name=".activity.WonderScreenActivity" />
+        <activity android:name="net.winnerawan.ibod.activity.TVStreamActivity" />
+        <activity android:name="net.winnerawan.ibod.activity.StreamActivity" />
+        <activity android:name="net.winnerawan.ibod.activity.SerialMovieActivity" />
+        <activity android:name="net.winnerawan.ibod.activity.AnimeListActivity" />
+        <activity android:name="net.winnerawan.ibod.activity.SemiMovieDetailActivity" />
+        <activity android:name="net.winnerawan.ibod.activity.WonderScreenActivity" />
         <activity
-            android:name=".activity.VideoPlayer"
+            android:name="net.winnerawan.ibod.activity.VideoPlayer"
             android:screenOrientation="landscape"
             android:theme="@style/AppPlayer" />
         <activity
@@ -111,13 +111,13 @@
 
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="net.winnerawan.wonderscreen.activity.VideoPlayer" />
+                android:value="net.winnerawan.ibod.activity.VideoPlayer" />
         </activity>
         <activity
-            android:name=".activity.WatchSerialActivity"
+            android:name="net.winnerawan.ibod.activity.WatchSerialActivity"
             android:configChanges="orientation|screenSize"
             android:theme="@style/AppFull" />
-        <activity android:name=".activity.WatchAnimeActivity"
+        <activity android:name="net.winnerawan.ibod.activity.WatchAnimeActivity"
             android:configChanges="orientation|screenSize"
             android:theme="@style/AppFull"/>
     </application>
