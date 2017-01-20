@@ -4,7 +4,7 @@
     <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
         <ProgressBar android:id="@id/loading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" />
         <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/height_480dp">
-            <com.android.volley.toolbox.NetworkImageView android:id="@id/img_content" android:layout_width="fill_parent" android:layout_height="@dimen/height_480dp" android:scaleType="centerCrop" />
+            <ImageView android:id="@id/img_content" android:layout_width="fill_parent" android:layout_height="@dimen/height_480dp" android:scaleType="centerCrop" />
             <ImageView android:id="@id/degradasi2" android:layout_width="fill_parent" android:layout_height="@dimen/height_480dp" android:src="@mipmap/gradasi" android:scaleType="fitXY" />
             <FrameLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="@dimen/height_480dp">
                 <ImageView android:layout_gravity="center" android:visibility="gone" android:layout_width="@dimen/width_46dp" android:layout_height="@dimen/height_46dp" android:src="@mipmap/play_mini" />
@@ -21,11 +21,7 @@
             <TextView android:textSize="@dimen/txt_sinopsis_size" android:textStyle="bold" android:textColor="@color/txt_sinopsis_color" android:id="@id/txt_synopsis" android:paddingLeft="@dimen/padding_left_15dp" android:paddingTop="@dimen/padding_top_10dp" android:paddingBottom="@dimen/padding_bottom_10dp" android:layout_width="@dimen/nol_dp" android:layout_height="wrap_content" android:text="@string/trailers" android:layout_weight="1.0" />
         </LinearLayout>
         <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
-            <!--<android.support.v7.widget.RecyclerView android:id="@id/recyclerview_list_trailer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/height_480dp" app:layout_behavior="@string/appbar_scrolling_view_behavior" />-->
-            <FrameLayout
-                android:id="@+id/trailer_view"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+            <android.support.v7.widget.RecyclerView android:id="@id/recyclerview_list_trailer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/height_480dp" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
         </LinearLayout>
     </LinearLayout>
 </ScrollView>

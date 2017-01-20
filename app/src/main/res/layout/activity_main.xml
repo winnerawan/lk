@@ -1,16 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:id="@id/rootLayout" android:background="@color/colorPrimary" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <LinearLayout android:gravity="center" android:id="@id/zulu" android:paddingTop="@dimen/padding_top_20dp" android:paddingBottom="@dimen/padding_bottom_34dp" android:layout_width="fill_parent" android:layout_height="wrap_content">
-        <ImageView android:layout_width="@dimen/width_92dp" android:layout_height="@dimen/height_23dp" android:src="@mipmap/zulu_logo" />
+<LinearLayout android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout android:orientation="vertical" android:background="@mipmap/logbg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+        <ImageView
+            android:layout_width="@dimen/width_261dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@mipmap/ww" />
+        <FrameLayout android:paddingTop="@dimen/padding_top_104dp" android:layout_width="fill_parent" android:layout_height="@dimen/nol_dp" android:layout_weight="1.0"></FrameLayout>
+
+        <LinearLayout android:gravity="bottom" android:orientation="vertical" android:paddingLeft="@dimen/padding_left_18dp" android:paddingRight="@dimen/padding_right_18dp" android:paddingBottom="@dimen/padding_bottom_15dp" android:layout_width="fill_parent" android:layout_height="@dimen/nol_dp" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/txt_easiest_way" android:textColor="@color/white_color" android:paddingBottom="@dimen/padding_bottom_68dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/welcome" />
+
+            <com.google.android.gms.common.SignInButton
+                android:id="@+id/btn_login"
+                android:textSize="@dimen/btn_get_started_txt_size"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/height_52dp"
+                android:textColor="@color/white_color"
+                android:layout_centerInParent="true"
+                />
+
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/adView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                ads:adSize="BANNER"
+                ads:adUnitId="@string/ads_banner">
+            </com.google.android.gms.ads.AdView>
+        </LinearLayout>
     </LinearLayout>
-    <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/nol_dp" android:layout_weight="1.0">
-        <RelativeLayout android:id="@id/container" android:paddingLeft="@dimen/padding_left_18dp" android:paddingRight="@dimen/padding_right_18dp" android:layout_width="fill_parent" android:layout_height="wrap_content">
-            <LinearLayout android:gravity="bottom" android:layout_width="fill_parent" android:layout_height="@dimen/height_36dp">
-                <View android:background="@color/under_txt_line_color_unselected" android:layout_width="fill_parent" android:layout_height="@dimen/height_3dp" />
-            </LinearLayout>
-            <android.support.design.widget.TabLayout android:id="@id/tab_layout" android:layout_width="fill_parent" android:layout_height="@dimen/height_36dp" app:tabIndicatorColor="@color/tabIndicatorColor" app:tabIndicatorHeight="@dimen/height_3dp" app:tabMode="fixed" app:tabGravity="fill" app:tabMaxWidth="@dimen/nol_dp" app:tabTextAppearance="@style/MyCustomTabLayout" app:tabTextColor="@color/tabTextColor" app:tabSelectedTextColor="@color/white_color" />
-        </RelativeLayout>
-        <android.support.v4.view.ViewPager android:id="@id/view_pager" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/container" />
-    </RelativeLayout>
 </LinearLayout>

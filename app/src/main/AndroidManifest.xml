@@ -1,125 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="net.winnerawan.ibod">
+    package="id.biz.wonderwall.ibod">
 
-    <uses-feature
-        android:glEsVersion="0x20000"
-        android:required="true" />
-
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
-    <uses-permission android:name="android.permission.READ_PROFILE" />
-    <uses-permission android:name="android.permission.READ_CONTACTS" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-
-    <uses-feature
-        android:glEsVersion="0x20000"
-        android:required="true" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
 
     <application
-        android:name="net.winnerawan.ibod.app.AppController"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:largeHeap="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <meta-data
-            android:name="com.facebook.sdk.ApplicationId"
-            android:value="@string/facebook_app_id" />
-        <meta-data
-            android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
-        <meta-data
-            android:name="io.fabric.ApiKey"
-            android:value="d42e4b4bf775aaae9d8ac1309f58f8158e83a599" />
-
-        <activity android:name="net.winnerawan.ibod.activity.SplashActivity">
+        <activity android:name=".activity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="net.winnerawan.ibod.activity.LoginActivity" />
-        <activity android:name="net.winnerawan.ibod.activity.HomeActivity" />
-        <activity android:name="net.winnerawan.ibod.activity.SearchActivity" />
-        <!-- Add this -->
-        <activity
-            android:name="com.facebook.FacebookActivity"
-            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
-            android:label="@string/app_name"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-        <activity android:name="net.winnerawan.ibod.activity.MoreActivity" />
-        <activity android:name="net.winnerawan.ibod.activity.PrivacyPolicyActivity" />
-        <activity android:name="net.winnerawan.ibod.activity.MyProfileActivity" />
-        <activity android:name="net.winnerawan.ibod.activity.TermConditionActivity" />
-        <!-- Include the AdActivity configChanges and theme. -->
-        <activity
-            android:name="com.google.android.gms.ads.AdActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
-            android:theme="@android:style/Theme.Translucent" />
-
-        <!-- Firebase Notifications -->
-        <service android:name="net.winnerawan.ibod.service.MyFirebaseMessagingService">
-            <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-            </intent-filter>
-        </service>
-        <service android:name="net.winnerawan.ibod.service.MyFirebaseInstanceIDService">
-            <intent-filter>
-                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
-            </intent-filter>
-        </service>
-        <!-- ./Firebase Notifications -->
-        <activity
-            android:name="net.winnerawan.ibod.activity.DetailMovieActivity"
-            android:animateLayoutChanges="true" />
-        <activity
-            android:name="net.winnerawan.ibod.activity.WatchMovieActivity"
-            android:configChanges="orientation|screenSize"
-            android:parentActivityName="net.winnerawan.ibod.activity.DetailMovieActivity"
-            android:theme="@style/AppFull" />
-        <activity
-            android:name="net.winnerawan.ibod.activity.WatchSemiMovieActivity"
-            android:configChanges="orientation|screenSize"
-            android:parentActivityName="net.winnerawan.ibod.activity.DetailMovieActivity"
-            android:theme="@style/AppFull" />
-        <activity android:name="net.winnerawan.ibod.activity.TVStreamActivity" />
-        <activity android:name="net.winnerawan.ibod.activity.StreamActivity" />
-        <activity android:name="net.winnerawan.ibod.activity.SerialMovieActivity" />
-        <activity android:name="net.winnerawan.ibod.activity.AnimeListActivity" />
-        <activity android:name="net.winnerawan.ibod.activity.SemiMovieDetailActivity" />
-        <activity android:name="net.winnerawan.ibod.activity.WonderScreenActivity" />
-        <activity
-            android:name="net.winnerawan.ibod.activity.VideoPlayer"
-            android:screenOrientation="landscape"
-            android:theme="@style/AppPlayer" />
-        <activity
-            android:name=".activity.ExpandedControlsActivity"
-            android:label="@string/app_name"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppPlayer">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="net.winnerawan.ibod.activity.VideoPlayer" />
-        </activity>
-        <activity
-            android:name="net.winnerawan.ibod.activity.WatchSerialActivity"
-            android:configChanges="orientation|screenSize"
-            android:theme="@style/AppFull" />
-        <activity android:name="net.winnerawan.ibod.activity.WatchAnimeActivity"
-            android:configChanges="orientation|screenSize"
-            android:theme="@style/AppFull"/>
+        <activity android:name=".activity.HomeActivity"/>
     </application>
 
 </manifest>

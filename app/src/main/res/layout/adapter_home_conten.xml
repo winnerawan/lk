@@ -1,26 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout android:gravity="center" android:id="@id/lyt_container_home_adapter" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.android.volley.toolbox.NetworkImageView android:id="@id/img_content" android:layout_width="fill_parent" android:layout_height="@dimen/height_img_content" android:scaleType="centerCrop" />
+    <ImageView android:id="@id/img_content" android:layout_width="fill_parent" android:layout_height="@dimen/height_img_content" android:scaleType="centerCrop" />
     <ImageView android:layout_width="fill_parent" android:layout_height="@dimen/height_img_content" android:src="@mipmap/gradasi2" android:scaleType="fitXY" />
     <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/height_img_content">
         <LinearLayout android:gravity="right" android:padding="@dimen/padding_18dp" android:layout_width="fill_parent" android:layout_height="fill_parent">
-            <FrameLayout
-                android:gravity="center_vertical"
-                android:orientation="vertical"
-                android:id="@id/lyt_episode"
-                android:background="@drawable/episode_bg"
-                android:layout_width="@dimen/width_74dp"
-                android:layout_height="@dimen/height_22dp">
-
-                <TextView
-                    android:textSize="@dimen/txt_episode_size"
-                    android:textColor="@color/sample_episode"
-                    android:layout_gravity="center"
-                    android:id="@id/txt_episode"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/sample_episode" />
+            <FrameLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/lyt_episode" android:background="@drawable/episode_bg" android:layout_width="@dimen/width_74dp" android:layout_height="@dimen/height_22dp">
+                <TextView android:textSize="@dimen/txt_episode_size" android:textColor="@color/sample_episode" android:layout_gravity="center" android:id="@id/txt_episode" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sample_episode" />
             </FrameLayout>
         </LinearLayout>
         <LinearLayout android:gravity="bottom|center|right" android:paddingRight="@dimen/padding_right_18dp" android:paddingBottom="@dimen/padding_bottom_18dp" android:layout_width="fill_parent" android:layout_height="fill_parent">
@@ -28,7 +14,7 @@
         </LinearLayout>
         <LinearLayout android:gravity="bottom|center|left" android:orientation="vertical" android:paddingLeft="@dimen/padding_left_10dp" android:paddingRight="@dimen/padding_right_10dp" android:paddingBottom="@dimen/padding_bottom_18dp" android:layout_width="fill_parent" android:layout_height="fill_parent">
             <TextView android:textSize="@dimen/txt_session" android:textColor="@color/txt_session" android:id="@id/txt_session" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sample_session" />
-            <TextView android:textSize="@dimen/txt_title" android:textColor="@color/txt_title" android:id="@id/txt_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sample_title" />
+            <TextView android:textSize="@dimen/txt_title" android:textColor="@color/txt_title" android:id="@id/txt_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sample_title" android:maxLines="1" />
             <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="5.0">
                 <TextView android:textSize="@dimen/txt_sub_title" android:textColor="@color/txt_sub_title" android:ellipsize="end" android:id="@id/txt_sub_title" android:layout_width="@dimen/nol_dp" android:layout_height="wrap_content" android:text="@string/sample_sub_title" android:maxLines="1" android:singleLine="true" android:layout_weight="4.0" />
             </LinearLayout>

@@ -15,7 +15,3 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
-
-# view res/layout/abc_screen_simple_overlay_action_mode.xml #generated:23
--keep class android.support.v7.internal.widget.FitWindowsFrameLayout { <init>(...); }
-

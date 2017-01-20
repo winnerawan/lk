@@ -93,7 +93,7 @@
     <string name="accept">Accept</string>
     <string name="activated">"Your account has
 already been activated"</string>
-    <string name="app_name">Wonder Screen</string>
+    <string name="app_name">iBoD</string>
     <string name="appbar_scrolling_view_behavior">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <string name="auth_google_play_services_client_facebook_display_name">Facebook</string>
     <string name="auth_google_play_services_client_google_display_name">Google</string>
@@ -102,6 +102,7 @@ already been activated"</string>
     <string name="cast_notification_connected_message">Connected to %1$s</string>
     <string name="cast_notification_connecting_message">Connecting to %1$s</string>
     <string name="cast_notification_disconnect">Disconnect</string>
+    <string name="com.crashlytics.android.build_id">4e755a52-0fbf-4c49-bfee-91ed0db7ec06</string>
     <string name="com_facebook_like_button_liked">Liked</string>
     <string name="com_facebook_like_button_not_liked">Like</string>
     <string name="com_facebook_loginview_log_in_button_long">Log in with Facebook</string>
@@ -119,9 +120,9 @@ already been activated"</string>
     <string name="email_address">Email Address</string>
     <string name="episode">Episodes</string>
     <string name="error_sampple">Error sample</string>
-    <string name="facebook_app_id">199951713800309</string>
+    <string name="facebook_app_id">1061425130619258</string>
     <string name="favorite_genre">YOUR FAVORITE GENRES</string>
-    <!--<string name="fb_login_protocol_scheme">fb1061425130619258</string>-->
+    <string name="fb_login_protocol_scheme">fb1061425130619258</string>
     <string name="follow_us">Follow Us On</string>
     <string name="forgot">Forgot password?</string>
     <string name="forgot_password">"It Looks Like You Forgot Your Password,
@@ -167,17 +168,12 @@ upper &amp; lower case letters and at least one numbers"</string>
     <string name="sample_description2">Tetangga Masa Gitu? Merupakan sitkom yang menampilkan kehidupan sehari-hari 2 pasangan suami istri. Pasangan yang pertama sudah menikah sekitar 10 tahun, sedangkan pasangan kedua baru saja menikah 8 hari. Pasangan ini tinggal dalam satu kompleks dan hidup bertetangga.</string>
     <string name="sample_episode" />
     <string name="sample_genre" />
-    <string name="sample_season">Season</string>
+    <string name="sample_season">Season 1</string>
     <string name="sample_session" />
-    <string name="admob_app_id">ca-app-pub-5062659998443194~6949299867</string>
-    <string name="ad_unit_id_native">ca-app-pub-5062659998443194/9902766260</string>
-    <string name="ad_unit_interstitial">ca-app-pub-5062659998443194/3856232665</string>
-    <string name="ad_unit_id_native_small">ca-app-pub-5062659998443194/2179193063</string>
     <string name="sample_sub_title" />
     <string name="sample_time" />
     <string name="sample_title" />
-    <string name="search">Search for Movies</string>
-    <string name="login">Sign In</string>
+    <string name="search">Search for Video</string>
     <string name="search_title">Tetangga masa gitu</string>
     <string name="select">Select at least 3</string>
     <string name="select_chanel">Select The Channels To Watch Live TV</string>
@@ -228,19 +224,11 @@ Bagi member pengguna "<b>aplikasi ini</b> jika ingin memberikan saran silahkan k
     <string name="verification_register">"Please check your email to activate
 your account"</string>
     <string name="welcome">"THE EASIEST WAY TO
-WATCH TV SHOWS,
-MOVIE &amp; MORE."</string>
+WATCH MOVIE &amp; MORE."</string>
     <string name="write_Review">Write Review</string>
     <string name="write_review">Write a Review</string>
-    <string name="on_error_login">Please, check out your internet connection!</string>
-    <string name="firebase_error_login">You have some problem with signing to your account!</string>
-    <string name="on_cancel_login">Entrance was canceled!</string>
-    <string name="new_movies">New Movies</string>
-    <string name="populer_movies">Populer Movies</string>
-    <string name="about_movies">About</string>
-    <string name="trailer_movies">Trailer</string>
-    <string name="review_movies">Review</string>
-    <string name="watch_movies">Watch Movie</string>
-    <string name="download">Download</string>
-    <string name="error_player">There was an error initializing the YouTubePlayer (%1$s)</string>
+    <string name="app_id">ca-app-pub-5062659998443194~4028442263</string>
+    <string name="ads_banner">ca-app-pub-5062659998443194/5505175468</string>
+    <string name="ads_interstitial">ca-app-pub-5062659998443194/8458641868</string>
+    <string name="ads_native">ca-app-pub-5062659998443194/3888841466</string>
 </resources>
